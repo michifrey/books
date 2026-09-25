@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leseliste – Empfehlungen</title>
+  <meta name="description" content="Kuratierte Buchempfehlungen mit Kurzzusammenfassungen, nach Themen sortiert.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__top">
+        <span class="logo">📚 Leseliste</span>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Farbschema wechseln">◐</button>
+      </div>
+      <h1>Bücher, die den Kopf <em>weiter</em> machen.</h1>
+      <p class="hero__lead">Persönliche Empfehlungen mit kurzer Zusammenfassung und den wichtigsten Gedanken – sortiert nach Themen.</p>
+      <label class="search">
+        <span aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Titel, Autor:in oder Stichwort suchen …" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="types" id="types" aria-label="Medientyp"></nav>
+
+    <section class="toolbar" aria-label="Filter">
+      <div class="chips" id="topics" role="group" aria-label="Themen"></div>
+      <div class="toolbar__row">
+        <p class="count" id="count" aria-live="polite"></p>
+        <div class="controls">
+          <select id="sort" aria-label="Sortierung">
+            <option value="rating">Empfehlung</option>
+            <option value="title">Titel A–Z</option>
+            <option value="year-desc">Neueste zuerst</option>
+            <option value="year-asc">Älteste zuerst</option>
+          </select>
+          <div class="segmented" role="group" aria-label="Ansicht">
+            <button type="button" data-view="topics" aria-pressed="true">Nach Themen</button>
+            <button type="button" data-view="grid" aria-pressed="false">Raster</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="results"></div>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Demnächst: Hörbücher · Podcasts · YouTube · Artikel</p>
+  </footer>
+
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="detail" id="detail-body"></div>
+  </dialog>
+
+  <script src="assets/app.js" type="module"></script>
+</body>
+</html>

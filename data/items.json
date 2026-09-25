@@ -1,0 +1,327 @@
+{
+  "topics": [
+    { "id": "gewohnheiten", "label": "Produktivität & Gewohnheiten", "emoji": "⚡" },
+    { "id": "psychologie", "label": "Psychologie & Denken", "emoji": "🧠" },
+    { "id": "business", "label": "Business & Geld", "emoji": "📈" },
+    { "id": "philosophie", "label": "Philosophie & Sinn", "emoji": "🏛️" },
+    { "id": "wissenschaft", "label": "Wissenschaft", "emoji": "🔬" },
+    { "id": "geschichte", "label": "Geschichte & Gesellschaft", "emoji": "🌍" },
+    { "id": "technologie", "label": "Technologie", "emoji": "💻" },
+    { "id": "gesundheit", "label": "Gesundheit", "emoji": "🌱" }
+  ],
+  "types": [
+    { "id": "book", "label": "Bücher", "status": "live" },
+    { "id": "audiobook", "label": "Hörbücher", "status": "soon" },
+    { "id": "podcast", "label": "Podcasts", "status": "soon" },
+    { "id": "video", "label": "YouTube", "status": "soon" },
+    { "id": "article", "label": "Artikel", "status": "soon" }
+  ],
+  "items": [
+    {
+      "id": "atomic-habits",
+      "type": "book",
+      "title": "Atomic Habits",
+      "subtitle": "Die 1%-Methode",
+      "author": "James Clear",
+      "year": 2018,
+      "pages": 320,
+      "topics": ["gewohnheiten", "psychologie"],
+      "rating": 5,
+      "summary": "Große Veränderungen entstehen aus winzigen, konsequent wiederholten Gewohnheiten. Clear zeigt, wie man gute Gewohnheiten offensichtlich, attraktiv, einfach und befriedigend macht – und schlechte umgekehrt.",
+      "takeaways": [
+        "Systeme schlagen Ziele: Fokus auf den Prozess, nicht das Ergebnis.",
+        "Identitätsbasierte Gewohnheiten: „Ich bin jemand, der …“",
+        "Umgebung gestalten statt auf Willenskraft zu setzen."
+      ]
+    },
+    {
+      "id": "thinking-fast-and-slow",
+      "type": "book",
+      "title": "Schnelles Denken, langsames Denken",
+      "subtitle": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "year": 2011,
+      "pages": 624,
+      "topics": ["psychologie", "business"],
+      "rating": 5,
+      "summary": "Der Nobelpreisträger beschreibt zwei Denksysteme: das schnelle, intuitive System 1 und das langsame, analytische System 2 – und die systematischen Denkfehler, die aus ihrem Zusammenspiel entstehen.",
+      "takeaways": [
+        "Intuition ist schnell, aber anfällig für Verzerrungen (Anker, Verfügbarkeit).",
+        "Verluste wiegen psychologisch etwa doppelt so schwer wie Gewinne.",
+        "Wichtige Entscheidungen bewusst verlangsamen."
+      ]
+    },
+    {
+      "id": "sapiens",
+      "type": "book",
+      "title": "Eine kurze Geschichte der Menschheit",
+      "subtitle": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "year": 2011,
+      "pages": 528,
+      "topics": ["geschichte", "wissenschaft"],
+      "rating": 4,
+      "summary": "Ein Parforceritt durch 70.000 Jahre Menschheitsgeschichte: von der kognitiven über die landwirtschaftliche bis zur wissenschaftlichen Revolution. Kern der These: Unsere Stärke ist die Fähigkeit, an gemeinsame Fiktionen zu glauben.",
+      "takeaways": [
+        "Geld, Staaten und Religionen sind „geteilte Mythen“, die Kooperation ermöglichen.",
+        "Die Agrarrevolution war für den Einzelnen nicht unbedingt ein Fortschritt.",
+        "Fortschritt und Glück sind nicht dasselbe."
+      ]
+    },
+    {
+      "id": "deep-work",
+      "type": "book",
+      "title": "Deep Work",
+      "subtitle": "Konzentriert arbeiten in einer abgelenkten Welt",
+      "author": "Cal Newport",
+      "year": 2016,
+      "pages": 304,
+      "topics": ["gewohnheiten", "technologie"],
+      "rating": 4,
+      "summary": "Die Fähigkeit, sich ablenkungsfrei auf kognitiv anspruchsvolle Aufgaben zu konzentrieren, wird immer seltener – und immer wertvoller. Newport liefert Strategien, um tiefe Arbeit zur Routine zu machen.",
+      "takeaways": [
+        "Tiefe Arbeit gezielt im Kalender blocken.",
+        "Langeweile aushalten lernen – nicht jede Pause mit dem Handy füllen.",
+        "Flache Arbeit (Mails, Meetings) bewusst begrenzen."
+      ]
+    },
+    {
+      "id": "meditations",
+      "type": "book",
+      "title": "Selbstbetrachtungen",
+      "subtitle": "Meditations",
+      "author": "Marc Aurel",
+      "year": 180,
+      "pages": 224,
+      "topics": ["philosophie"],
+      "rating": 5,
+      "summary": "Die privaten Notizen eines römischen Kaisers, nie zur Veröffentlichung gedacht. Ein zeitloser Leitfaden der Stoa: Gelassenheit gegenüber dem Unkontrollierbaren, Pflichtbewusstsein und Demut.",
+      "takeaways": [
+        "Unterscheide zwischen dem, was in deiner Macht steht, und dem, was nicht.",
+        "Nicht die Dinge beunruhigen uns, sondern unsere Urteile über sie.",
+        "Lebe jeden Tag, als wäre er ein vollständiges Leben."
+      ]
+    },
+    {
+      "id": "psychology-of-money",
+      "type": "book",
+      "title": "Über die Psychologie des Geldes",
+      "subtitle": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "year": 2020,
+      "pages": 256,
+      "topics": ["business", "psychologie"],
+      "rating": 5,
+      "summary": "Erfolg mit Geld hat weniger mit Intelligenz zu tun als mit Verhalten. In 19 kurzen Geschichten zeigt Housel, wie Emotionen, Herkunft und Geduld unsere finanziellen Entscheidungen prägen.",
+      "takeaways": [
+        "Zinseszins braucht vor allem Zeit – und Durchhaltevermögen.",
+        "Reichtum ist das, was man nicht sieht: nicht ausgegebenes Geld.",
+        "„Genug“ zu definieren schützt vor unnötigem Risiko."
+      ]
+    },
+    {
+      "id": "mans-search-for-meaning",
+      "type": "book",
+      "title": "… trotzdem Ja zum Leben sagen",
+      "subtitle": "Ein Psychologe erlebt das Konzentrationslager",
+      "author": "Viktor E. Frankl",
+      "year": 1946,
+      "pages": 192,
+      "topics": ["philosophie", "psychologie", "geschichte"],
+      "rating": 5,
+      "summary": "Frankl verarbeitet seine Erfahrungen in Auschwitz und anderen Lagern und entwickelt daraus die Logotherapie: Der Mensch kann selbst unter extremsten Umständen einen Sinn finden – und das hält ihn am Leben.",
+      "takeaways": [
+        "Die letzte Freiheit: die Wahl der eigenen Haltung.",
+        "Wer ein Warum zu leben hat, erträgt fast jedes Wie.",
+        "Sinn entsteht durch Werk, Liebe und Haltung im Leid."
+      ]
+    },
+    {
+      "id": "why-we-sleep",
+      "type": "book",
+      "title": "Das große Buch vom Schlaf",
+      "subtitle": "Why We Sleep",
+      "author": "Matthew Walker",
+      "year": 2017,
+      "pages": 464,
+      "topics": ["gesundheit", "wissenschaft"],
+      "rating": 4,
+      "summary": "Der Neurowissenschaftler erklärt, warum Schlaf die Grundlage für Gedächtnis, Immunsystem und emotionale Stabilität ist – und welche Folgen chronischer Schlafmangel hat.",
+      "takeaways": [
+        "Regelmäßige Schlafenszeiten sind wichtiger als Ausschlafen am Wochenende.",
+        "Koffein und Alkohol stören den Schlaf stärker als gedacht.",
+        "Schlaf festigt Gelerntes – Lernen braucht Nächte."
+      ]
+    },
+    {
+      "id": "lean-startup",
+      "type": "book",
+      "title": "The Lean Startup",
+      "subtitle": "Schnell, risikolos und erfolgreich Unternehmen gründen",
+      "author": "Eric Ries",
+      "year": 2011,
+      "pages": 336,
+      "topics": ["business", "technologie"],
+      "rating": 4,
+      "summary": "Startups sind Experimente unter extremer Unsicherheit. Ries überträgt Prinzipien des Lean Manufacturing auf Gründungen: bauen, messen, lernen – in möglichst kurzen Zyklen.",
+      "takeaways": [
+        "Minimum Viable Product: so früh wie möglich echtes Feedback holen.",
+        "Validiertes Lernen statt Eitelkeitsmetriken.",
+        "Pivot oder Persevere: Kurswechsel ist kein Scheitern."
+      ]
+    },
+    {
+      "id": "zero-to-one",
+      "type": "book",
+      "title": "Zero to One",
+      "subtitle": "Wie Innovation unsere Gesellschaft rettet",
+      "author": "Peter Thiel, Blake Masters",
+      "year": 2014,
+      "pages": 256,
+      "topics": ["business", "technologie"],
+      "rating": 3,
+      "summary": "Echter Fortschritt entsteht nicht durch Kopieren (1 → n), sondern durch etwas grundlegend Neues (0 → 1). Thiel plädiert für Monopole durch Einzigartigkeit statt Wettbewerb.",
+      "takeaways": [
+        "Welche wichtige Wahrheit sehen nur wenige Menschen so wie du?",
+        "Wettbewerb zerstört Gewinne – Differenzierung schafft Wert.",
+        "Kleine Märkte zuerst dominieren, dann expandieren."
+      ]
+    },
+    {
+      "id": "factfulness",
+      "type": "book",
+      "title": "Factfulness",
+      "subtitle": "Wie wir lernen, die Welt so zu sehen, wie sie wirklich ist",
+      "author": "Hans Rosling",
+      "year": 2018,
+      "pages": 400,
+      "topics": ["geschichte", "wissenschaft", "psychologie"],
+      "rating": 5,
+      "summary": "Die meisten Menschen schätzen den Zustand der Welt systematisch zu negativ ein. Rosling benennt zehn Instinkte, die unseren Blick verzerren, und zeigt mit Daten, wie viel besser es vielen geht.",
+      "takeaways": [
+        "Die Welt ist nicht in „arm“ und „reich“ geteilt – die meisten leben dazwischen.",
+        "Dinge können schlecht sein und sich gleichzeitig verbessern.",
+        "Vor dem Urteil: Größenordnungen und Vergleiche prüfen."
+      ]
+    },
+    {
+      "id": "the-gene",
+      "type": "book",
+      "title": "Das Gen",
+      "subtitle": "Eine sehr persönliche Geschichte",
+      "author": "Siddhartha Mukherjee",
+      "year": 2016,
+      "pages": 768,
+      "topics": ["wissenschaft", "gesundheit", "geschichte"],
+      "rating": 4,
+      "summary": "Von Mendels Erbsen bis CRISPR: die Geschichte der Genetik, verwoben mit der Familiengeschichte des Autors. Ein Buch über Wissenschaft, Ethik und die Frage, was uns ausmacht.",
+      "takeaways": [
+        "Gene sind Wahrscheinlichkeiten, keine Schicksale.",
+        "Genetisches Wissen bringt ethische Verantwortung mit sich.",
+        "Die Eugenik-Geschichte mahnt zur Vorsicht."
+      ]
+    },
+    {
+      "id": "guns-germs-steel",
+      "type": "book",
+      "title": "Arm und Reich",
+      "subtitle": "Guns, Germs, and Steel",
+      "author": "Jared Diamond",
+      "year": 1997,
+      "pages": 656,
+      "topics": ["geschichte", "wissenschaft"],
+      "rating": 4,
+      "summary": "Warum haben Eurasier andere Kontinente erobert und nicht umgekehrt? Diamond erklärt die Ungleichheit der Welt mit Geografie, domestizierbaren Pflanzen und Tieren sowie Krankheitserregern.",
+      "takeaways": [
+        "Die Ost-West-Ausrichtung Eurasiens begünstigte die Verbreitung der Landwirtschaft.",
+        "Krankheitserreger waren mächtigere Waffen als Gewehre.",
+        "Geschichte folgt Umweltbedingungen, nicht „Überlegenheit“."
+      ]
+    },
+    {
+      "id": "pragmatic-programmer",
+      "type": "book",
+      "title": "The Pragmatic Programmer",
+      "subtitle": "Your Journey to Mastery",
+      "author": "David Thomas, Andrew Hunt",
+      "year": 1999,
+      "pages": 352,
+      "topics": ["technologie", "gewohnheiten"],
+      "rating": 5,
+      "summary": "Ein Klassiker über Handwerk und Haltung in der Softwareentwicklung: Verantwortung übernehmen, Duplikation vermeiden, iterativ arbeiten und die eigenen Werkzeuge beherrschen.",
+      "takeaways": [
+        "DRY – Don't Repeat Yourself.",
+        "Keine kaputten Fenster: kleine Mängel sofort beheben.",
+        "Tracer Bullets: früh ein durchgängiges Gerüst bauen."
+      ]
+    },
+    {
+      "id": "range",
+      "type": "book",
+      "title": "Es lebe der Generalist!",
+      "subtitle": "Range",
+      "author": "David Epstein",
+      "year": 2019,
+      "pages": 368,
+      "topics": ["psychologie", "gewohnheiten"],
+      "rating": 4,
+      "summary": "Frühe Spezialisierung funktioniert in klar geregelten Umgebungen wie Schach oder Golf. In einer komplexen, unvorhersehbaren Welt sind jedoch oft Generalisten mit breiter Erfahrung im Vorteil.",
+      "takeaways": [
+        "Eine „Sampling-Phase“ ist kein Umweg, sondern eine Investition.",
+        "Analogien aus fremden Feldern lösen neue Probleme.",
+        "Langsames, schwieriges Lernen hält länger."
+      ]
+    },
+    {
+      "id": "four-thousand-weeks",
+      "type": "book",
+      "title": "4000 Wochen",
+      "subtitle": "Das Leben ist zu kurz für Zeitmanagement",
+      "author": "Oliver Burkeman",
+      "year": 2021,
+      "pages": 272,
+      "topics": ["philosophie", "gewohnheiten"],
+      "rating": 5,
+      "summary": "Ein durchschnittliches Leben dauert etwa 4000 Wochen. Statt immer effizienter zu werden, sollten wir unsere Endlichkeit akzeptieren und bewusst entscheiden, was wir nicht tun.",
+      "takeaways": [
+        "Du wirst nie „alles erledigt“ haben – und das ist befreiend.",
+        "Bewusst Dinge liegen lassen, um Wichtiges zu tun.",
+        "Geduld und Präsenz statt ständiger Optimierung."
+      ]
+    },
+    {
+      "id": "outlive",
+      "type": "book",
+      "title": "Outlive",
+      "subtitle": "Wie wir länger leben – und dabei gesund bleiben",
+      "author": "Peter Attia",
+      "year": 2023,
+      "pages": 496,
+      "topics": ["gesundheit", "wissenschaft"],
+      "rating": 4,
+      "summary": "Attia plädiert für „Medizin 3.0“: Prävention statt Reparatur. Im Fokus stehen die vier großen chronischen Krankheiten und die Frage, wie Bewegung, Schlaf, Ernährung und emotionale Gesundheit die gesunden Lebensjahre verlängern.",
+      "takeaways": [
+        "Healthspan ist wichtiger als Lifespan.",
+        "Ausdauer (Zone 2), VO₂max und Kraft sind zentrale Hebel.",
+        "Emotionale Gesundheit gehört zur Langlebigkeit dazu."
+      ]
+    },
+    {
+      "id": "almanack-naval",
+      "type": "book",
+      "title": "The Almanack of Naval Ravikant",
+      "subtitle": "A Guide to Wealth and Happiness",
+      "author": "Eric Jorgenson",
+      "year": 2020,
+      "pages": 244,
+      "topics": ["business", "philosophie"],
+      "rating": 4,
+      "summary": "Eine Sammlung von Gedanken des Investors Naval Ravikant zu Vermögensaufbau, Hebelwirkung und Glück – kuratiert aus Tweets, Podcasts und Interviews.",
+      "takeaways": [
+        "Baue spezifisches Wissen auf, das sich nicht leicht lernen lässt.",
+        "Hebel: Code und Medien skalieren ohne Erlaubnis.",
+        "Glück ist eine Fähigkeit, die man trainieren kann."
+      ]
+    }
+  ]
+}
