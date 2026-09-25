@@ -24,6 +24,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate data
         run: python3 -c "import json; d=json.load(open('data/items.json')); print(len(d['items']), 'items OK')"
+      - name: Stamp asset versions (cache busting)
+        run: sed -i "s/__VERSION__/${GITHUB_SHA::7}/g" index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

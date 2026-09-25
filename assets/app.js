@@ -42,7 +42,7 @@ const ICON_PATHS = {
   link: '<path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>',
   sparkle: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>',
 };
-const icon = (name, cls = "") => `<svg viewBox="0 0 24 24" aria-hidden="true" class="${cls}">${ICON_PATHS[name] ?? ""}</svg>`;
+const icon = (name, cls = "") => `<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" class="${cls}">${ICON_PATHS[name] ?? ""}</svg>`;
 
 // Evenly spread hues so every topic gets its own recognisable dot colour.
 const TOPIC_HUES = [16, 262, 145, 38, 200, 330, 225, 95];
@@ -528,7 +528,9 @@ function bind() {
 
 async function init() {
   try {
-    const res = await fetch("data/items.json");
+    // Deploys stamp a version on the script URL; reuse it so data and code never mismatch in caches.
+    const version = new URL(import.meta.url).searchParams.get("v") ?? "";
+    const res = await fetch(`data/items.json?v=${version}`);
     data = await res.json();
   } catch (err) {
     $("#results").innerHTML = `<div class="empty"><p>Daten konnten nicht geladen werden.</p></div>`;
