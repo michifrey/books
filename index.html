@@ -3,69 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Leseliste – Empfehlungen</title>
-  <meta name="description" content="Kuratierte Buchempfehlungen mit Kurzzusammenfassungen, nach Themen sortiert.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+  <title>Leseliste</title>
+  <meta name="description" content="Persönliche Empfehlungen: Bücher, Hörbücher, Podcasts, Videos und Artikel mit Kurzzusammenfassung, nach Themen sortiert.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23F2613F'/><path d='M9 8h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H9zM23 8h-3v14h3z' fill='white'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <div id="list-view">
-  <header class="hero">
-    <div class="wrap hero__inner">
-      <div class="hero__top">
-        <span class="logo">📚 Leseliste</span>
-        <button class="icon-btn" data-theme-toggle type="button" aria-label="Farbschema wechseln">◐</button>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H5zM19 4h-3v14h3z"/></svg>
+        </span>
+        Leseliste
+      </a>
+      <nav class="nav" id="types" aria-label="Medientyp"></nav>
+      <div class="side-group">
+        <p class="side-label">Themen</p>
+        <div class="topics" id="topics" role="group" aria-label="Themen"></div>
       </div>
-      <h1>Was den Kopf <em>weiter</em> macht.</h1>
-      <p class="hero__lead">Persönliche Empfehlungen – Bücher, Hörbücher, Podcasts, Videos und Artikel – mit kurzer Zusammenfassung und den wichtigsten Gedanken, sortiert nach Themen.</p>
-      <label class="search">
-        <span aria-hidden="true">⌕</span>
-        <input id="search" type="search" placeholder="Titel, Autor:in oder Stichwort suchen …" autocomplete="off">
-        <kbd>/</kbd>
-      </label>
-    </div>
-  </header>
+    </aside>
 
-  <main class="wrap">
-    <nav class="types" id="types" aria-label="Medientyp"></nav>
+    <div class="main">
+      <header class="topbar">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="search" type="search" placeholder="Titel, Autor:in oder Stichwort suchen" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <button class="icon-btn" data-theme-toggle type="button" aria-label="Farbschema wechseln">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+        </button>
+      </header>
 
-    <section class="toolbar" aria-label="Filter">
-      <div class="chips" id="topics" role="group" aria-label="Themen"></div>
-      <div class="toolbar__row">
-        <p class="count" id="count" aria-live="polite"></p>
-        <div class="controls">
-          <select id="sort" aria-label="Sortierung">
-            <option value="rating">Empfehlung</option>
-            <option value="title">Titel A–Z</option>
-            <option value="year-desc">Neueste zuerst</option>
-            <option value="year-asc">Älteste zuerst</option>
-          </select>
-          <div class="segmented" role="group" aria-label="Ansicht">
-            <button type="button" data-view="topics" aria-pressed="true">Nach Themen</button>
-            <button type="button" data-view="grid" aria-pressed="false">Raster</button>
+      <div id="list-view">
+        <section id="hero" aria-label="Empfehlung des Tages"></section>
+
+        <div class="toolbar">
+          <div>
+            <h1 class="toolbar__title" id="list-title">Alle Empfehlungen</h1>
+            <p class="count" id="count" aria-live="polite"></p>
+          </div>
+          <div class="controls">
+            <select id="sort" aria-label="Sortierung">
+              <option value="rating">Beste Bewertung</option>
+              <option value="title">Titel A–Z</option>
+              <option value="year-desc">Neueste zuerst</option>
+              <option value="year-asc">Älteste zuerst</option>
+            </select>
+            <div class="segmented" role="group" aria-label="Ansicht">
+              <button type="button" data-view="topics" aria-pressed="true">Regale</button>
+              <button type="button" data-view="grid" aria-pressed="false">Raster</button>
+            </div>
           </div>
         </div>
+
+        <div id="results"></div>
       </div>
-    </section>
 
-    <div id="results"></div>
-  </main>
-  </div>
+      <div id="detail-view" hidden>
+        <a class="back" id="back" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          Zurück zur Übersicht
+        </a>
+        <article class="page" id="page"></article>
+      </div>
 
-  <div id="detail-view" hidden>
-    <div class="wrap topbar">
-      <a class="back" id="back" href="#">← Alle Empfehlungen</a>
-      <button class="icon-btn" data-theme-toggle type="button" aria-label="Farbschema wechseln">◐</button>
+      <footer class="footer">
+        Leseliste · Cover über <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a>, sonst generiert
+      </footer>
     </div>
-    <article class="wrap page" id="page"></article>
-  </div>
 
-  <footer class="wrap footer">
-    <p>📚 Leseliste · Cover über <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a>, sonst generiert</p>
-  </footer>
+    <aside class="rail" id="rail" aria-label="Bestenliste"></aside>
+  </div>
 
   <script src="assets/app.js" type="module"></script>
 </body>
