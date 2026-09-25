@@ -38,6 +38,13 @@ Alles steht in [`data/items.json`](data/items.json). Neues Buch = neuer Eintrag 
 }
 ```
 
+Weitere optionale Felder:
+
+- `lists` – in welcher Liste der Eintrag steht: `thomas` (Empfohlen von Thomas Härry) und/oder `michi` (Von Michi gehört). Die Listen sind unter `lists` oben in der Datei definiert.
+- `series` und `seriesNo` – Reihe und Band, z. B. `"Ulldart"` / `4`. Bände werden in Reihenfolge sortiert, auf der Detailseite erscheint „Mehr aus der Reihe“.
+- `platform` – z. B. `"Google Play Books"` (der Button verlinkt dann auf die Google-Play-Suche) oder `"Pocket Casts"`.
+- `rating` ist optional. Einträge ohne Bewertung zeigen keine Sterne.
+
 Für Nicht-Bücher gibt es zusätzlich `duration` (Minuten), `format` (z. B. „TED Talk“, „YouTube-Kanal“) und `source` (z. B. „Wait But Why“). `type` ist einer von `book`, `audiobook`, `podcast`, `video`, `article`.
 
 - `related` verknüpft Einträge – die Verknüpfung wirkt in beide Richtungen.
@@ -68,5 +75,7 @@ python3 -m http.server 8000
 - [ ] Vorschaubilder für YouTube (braucht feste Video-/Kanal-IDs)
 - [ ] Hörbücher: Sprecher:in, Laufzeit, Plattform-Links
 - [ ] Einzelne Podcast-Folgen statt nur ganzer Shows
-- [ ] Status-Tags („Gelesen“, „Will ich lesen“) und Merkliste
+- [x] Listen: „Empfohlen von Thomas Härry“ und „Von Michi gehört“
+- [x] Reihen mit Bandnummer
+- [ ] Eigene Bewertungen für Michis Hörbücher
 - [ ] Englisch/Deutsch-Umschalter

@@ -2,6 +2,7 @@ const $ = (sel) => document.querySelector(sel);
 
 const state = {
   type: "all",
+  list: "all",
   topics: new Set(),
   query: "",
   sort: "rating",
@@ -12,6 +13,7 @@ let data = { topics: [], types: [], items: [] };
 const topicById = new Map();
 const typeById = new Map();
 const itemById = new Map();
+const listById = new Map();
 let listHash = "";
 let listScroll = 0;
 
@@ -45,7 +47,8 @@ const ICON_PATHS = {
 const icon = (name, cls = "") => `<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" class="${cls}">${ICON_PATHS[name] ?? ""}</svg>`;
 
 // Evenly spread hues so every topic gets its own recognisable dot colour.
-const TOPIC_HUES = [16, 262, 145, 38, 200, 330, 225, 95];
+const TOPIC_HUES = [16, 262, 145, 38, 200, 330, 225, 95, 280, 185, 120, 0, 50, 305];
+const LIST_HUES = { thomas: 16, michi: 200 };
 const topicHue = (id) => TOPIC_HUES[data.topics.findIndex((t) => t.id === id) % TOPIC_HUES.length] ?? 0;
 
 const TYPE_TEXT = {
@@ -60,6 +63,7 @@ const typeOne = (id) => TYPE_TEXT[id]?.one ?? "";
 function itemLink(item) {
   if (item.link) return item.link;
   const q = encodeURIComponent(`${item.title} ${item.author}`);
+  if (item.platform === "Google Play Books") return `https://play.google.com/store/search?q=${q}&c=audiobooks`;
   switch (item.type) {
     case "book": return `https://openlibrary.org/search?q=${q}`;
     case "video": return `https://www.youtube.com/results?search_query=${q}`;
@@ -67,13 +71,18 @@ function itemLink(item) {
   }
 }
 
+const seriesLabel = (item) =>
+  item.series ? `${item.series.replace(/ \(.*\)$/, "")}${item.seriesNo ? ` · Band ${item.seriesNo}` : ""}` : "";
+
 function metaFacts(item) {
   const facts = [];
+  if (item.series) facts.push(["Reihe", seriesLabel(item)]);
   if (item.year) facts.push(["Jahr", yearLabel(item.year)]);
   if (item.pages) facts.push(["Umfang", `${item.pages} Seiten`]);
   if (item.duration) facts.push([item.type === "article" ? "Lesezeit" : "Dauer", `${item.duration} Min.`]);
   if (item.format) facts.push(["Format", item.format]);
   if (item.source) facts.push(["Quelle", item.source]);
+  if (item.platform) facts.push(["Plattform", item.platform]);
   return facts;
 }
 
@@ -145,6 +154,7 @@ function hydrateCovers(root) {
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   state.type = typeById.has(p.get("type")) ? p.get("type") : "all";
+  state.list = listById.has(p.get("l")) ? p.get("l") : "all";
   state.topics = new Set((p.get("t") || "").split(",").filter((t) => topicById.has(t)));
   state.query = p.get("q") || "";
   state.sort = p.get("sort") || "rating";
@@ -154,6 +164,7 @@ function readHash() {
 function stateToHash() {
   const p = new URLSearchParams();
   if (state.type !== "all") p.set("type", state.type);
+  if (state.list !== "all") p.set("l", state.list);
   if (state.topics.size) p.set("t", [...state.topics].join(","));
   if (state.query) p.set("q", state.query);
   if (state.sort !== "rating") p.set("sort", state.sort);
@@ -168,14 +179,17 @@ function writeHash() {
 
 /* ---------- Filtering ---------- */
 
-const ofType = (item) => state.type === "all" || item.type === state.type;
+// Type and list together define the pool the topic counts, hero and rail work on.
+const ofType = (item) =>
+  (state.type === "all" || item.type === state.type) &&
+  (state.list === "all" || item.lists?.includes(state.list));
 
 function matches(item) {
   if (!ofType(item)) return false;
   if (state.topics.size && !item.topics.some((t) => state.topics.has(t))) return false;
   if (state.query) {
     const hay = normalize(
-      [item.title, item.subtitle, item.author, item.summary, item.source, item.format,
+      [item.title, item.subtitle, item.author, item.summary, item.source, item.format, item.series, item.platform,
         ...(item.takeaways || []), ...item.topics.map(topicLabel), typeById.get(item.type)?.label].join(" ")
     );
     return normalize(state.query).split(/\s+/).every((w) => hay.includes(w));
@@ -183,8 +197,14 @@ function matches(item) {
   return true;
 }
 
+// Keeps series volumes together and in reading order.
+const bySeries = (a, b) =>
+  (a.series ?? a.title).localeCompare(b.series ?? b.title, "de") ||
+  (a.seriesNo ?? 999) - (b.seriesNo ?? 999) ||
+  a.title.localeCompare(b.title, "de");
+
 const sorters = {
-  rating: (a, b) => b.rating - a.rating || a.title.localeCompare(b.title, "de"),
+  rating: (a, b) => (b.rating ?? 0) - (a.rating ?? 0) || bySeries(a, b),
   title: (a, b) => a.title.localeCompare(b.title, "de"),
   "year-desc": (a, b) => (b.year ?? 0) - (a.year ?? 0),
   "year-asc": (a, b) => (a.year ?? 0) - (b.year ?? 0),
@@ -213,7 +233,7 @@ function card(item) {
     <div>
       <h3 class="book__title">${esc(item.title)}</h3>
       <p class="book__author">${esc(item.author)}</p>
-      <div class="book__meta">${rating(item.rating)}<span>·</span><span>${typeOne(item.type)}</span></div>
+      <div class="book__meta">${item.rating ? `${rating(item.rating)}<span>·</span>` : ""}<span class="book__kind">${esc(seriesLabel(item) || typeOne(item.type))}</span></div>
     </div>
   </a>`;
 }
@@ -239,6 +259,15 @@ function renderTypes() {
       </button>`;
     })
     .join("");
+}
+
+function renderLists() {
+  const pool = data.items.filter((i) => state.type === "all" || i.type === state.type);
+  const btn = (id, label, n) => `<button type="button" class="topic" data-list="${id}" aria-pressed="${state.list === id}">
+      <span class="dot" style="--h:${LIST_HUES[id] ?? 240}"></span>${esc(label)}<span class="n">${n}</span>
+    </button>`;
+  $("#lists").innerHTML = btn("all", "Alle Listen", pool.length) +
+    data.lists.map((l) => btn(l.id, l.label, pool.filter((i) => i.lists?.includes(l.id)).length)).join("");
 }
 
 function renderTopics() {
@@ -282,7 +311,8 @@ function renderHero() {
 }
 
 function listTitle() {
-  const type = state.type === "all" ? "Alle Empfehlungen" : typeById.get(state.type)?.label;
+  const list = listById.get(state.list);
+  const type = state.type === "all" ? (list?.label ?? "Alle Empfehlungen") : typeById.get(state.type)?.label;
   if (state.query) return `Suche: „${state.query}“`;
   if (state.topics.size === 1) return `${type} · ${topicLabel([...state.topics][0])}`;
   return type;
@@ -317,19 +347,19 @@ function renderResults() {
 
 function renderRail() {
   const pool = data.items.filter(ofType);
-  const top = [...pool].sort(sorters.rating).slice(0, 5);
+  const top = pool.filter((i) => i.rating).sort(sorters.rating).slice(0, 5);
   const counts = data.types
     .filter((t) => t.id !== "all")
     .map((t) => ({ t, n: data.items.filter((i) => i.type === t.id).length }));
   const max = Math.max(...counts.map((c) => c.n));
   $("#rail").innerHTML = `
-    <div class="rail__card">
+    ${top.length ? `<div class="rail__card">
       <h2>Bestenliste</h2>
       <ol class="toplist">${top.map((i) => `<li><a href="#/${i.id}">
         ${cover(i)}
         <div><strong>${esc(i.title)}</strong><span>${esc(i.author)}</span></div>
       </a></li>`).join("")}</ol>
-    </div>
+    </div>` : ""}
     <div class="rail__card">
       <h2>In der Sammlung</h2>
       <div class="mix">${counts.map(({ t, n }) => `<div class="mix__row">
@@ -341,6 +371,7 @@ function renderRail() {
 
 function renderList() {
   renderTypes();
+  renderLists();
   renderTopics();
   renderHero();
   renderResults();
@@ -374,25 +405,30 @@ function sameTopicItems(item, exclude) {
 function renderDetail(item) {
   const text = TYPE_TEXT[item.type] ?? TYPE_TEXT.book;
   const related = relatedItems(item);
-  const more = sameTopicItems(item, new Set(related.map((r) => r.id)));
+  const inSeries = item.series
+    ? data.items.filter((o) => o.series === item.series && o.id !== item.id).sort(bySeries)
+    : [];
+  const more = sameTopicItems(item, new Set([...related, ...inSeries].map((r) => r.id)));
+  const listPills = (item.lists ?? []).map((id) =>
+    `<span class="list-pill"><span class="dot" style="--h:${LIST_HUES[id] ?? 240}"></span>${esc(listById.get(id)?.short ?? id)}</span>`).join("");
   const starsHtml = Array.from({ length: 5 }, (_, i) => icon("star", i < item.rating ? "" : "off")).join("");
 
   $("#page").innerHTML = `
     <section class="page__hero">
       <div class="page__cover">${cover(item)}</div>
       <div>
-        <span class="type-pill">${icon(item.type)} ${typeOne(item.type)}</span>
+        <div class="pills"><span class="type-pill">${icon(item.type)} ${typeOne(item.type)}</span>${listPills}</div>
         <h1>${esc(item.title)}</h1>
         ${item.subtitle ? `<p class="page__subtitle">${esc(item.subtitle)}</p>` : ""}
         <p class="page__author">${text.by} <strong>${esc(item.author)}</strong></p>
-        <div class="page__rating" aria-label="Bewertung ${item.rating} von 5">${starsHtml}<b>${item.rating}.0</b></div>
+        ${item.rating ? `<div class="page__rating" aria-label="Bewertung ${item.rating} von 5">${starsHtml}<b>${item.rating}.0</b></div>` : ""}
         <dl class="facts">
           ${metaFacts(item).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}
         </dl>
         <div class="tags">${item.topics.map((t) =>
           `<a class="tag" href="#t=${t}&view=grid"><span class="dot" style="--h:${topicHue(t)}"></span>${esc(topicLabel(t))}</a>`).join("")}</div>
         <div class="page__actions">
-          <a class="btn btn--primary" href="${esc(itemLink(item))}" target="_blank" rel="noopener">${text.cta} ${icon("arrow")}</a>
+          <a class="btn btn--primary" href="${esc(itemLink(item))}" target="_blank" rel="noopener">${item.platform === "Google Play Books" ? "Bei Google Play anhören" : text.cta} ${icon("arrow")}</a>
           <button type="button" class="btn" data-action="share">${icon("link")} Link kopieren</button>
         </div>
       </div>
@@ -409,6 +445,7 @@ function renderDetail(item) {
       </section>` : ""}
     </div>
 
+    ${inSeries.length ? shelf(`Mehr aus der Reihe „${item.series.replace(/ \(.*\)$/, "")}“`, inSeries) : ""}
     ${related.length ? shelf("Passt dazu", related) : ""}
     ${more.length ? shelf("Mehr zum Thema", more) : ""}`;
 
@@ -428,6 +465,7 @@ function route() {
   if (detail) {
     if (!wasDetail) listScroll = scrollY;
     renderTypes();
+    renderLists();
     renderTopics();
     renderDetail(item);
     window.scrollTo(0, 0);
@@ -457,6 +495,14 @@ function bind() {
     const b = e.target.closest("[data-type]");
     if (!b) return;
     state.type = b.dataset.type;
+    state.topics.clear();
+    goList();
+  });
+
+  $("#lists").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-list]");
+    if (!b) return;
+    state.list = b.dataset.list;
     state.topics.clear();
     goList();
   });
@@ -540,6 +586,7 @@ async function init() {
   data.topics.forEach((t) => topicById.set(t.id, t));
   data.types.forEach((t) => typeById.set(t.id, t));
   data.items.forEach((i) => itemById.set(i.id, i));
+  (data.lists ?? []).forEach((l) => listById.set(l.id, l));
 
   bind();
   route();

@@ -2,43 +2,59 @@
   "topics": [
     {
       "id": "gewohnheiten",
-      "label": "Produktivität & Gewohnheiten",
-      "emoji": "⚡"
+      "label": "Produktivität & Gewohnheiten"
     },
     {
       "id": "psychologie",
-      "label": "Psychologie & Denken",
-      "emoji": "🧠"
+      "label": "Psychologie & Denken"
     },
     {
       "id": "business",
-      "label": "Business & Geld",
-      "emoji": "📈"
+      "label": "Business & Geld"
     },
     {
       "id": "philosophie",
-      "label": "Philosophie & Sinn",
-      "emoji": "🏛️"
+      "label": "Philosophie & Sinn"
     },
     {
       "id": "wissenschaft",
-      "label": "Wissenschaft",
-      "emoji": "🔬"
+      "label": "Wissenschaft"
     },
     {
       "id": "geschichte",
-      "label": "Geschichte & Gesellschaft",
-      "emoji": "🌍"
+      "label": "Geschichte & Gesellschaft"
     },
     {
       "id": "technologie",
-      "label": "Technologie",
-      "emoji": "💻"
+      "label": "Technologie"
     },
     {
       "id": "gesundheit",
-      "label": "Gesundheit",
-      "emoji": "🌱"
+      "label": "Gesundheit"
+    },
+    {
+      "id": "glaube",
+      "label": "Glaube & Spiritualität"
+    },
+    {
+      "id": "software",
+      "label": "Software-Engineering"
+    },
+    {
+      "id": "fantasy",
+      "label": "Fantasy"
+    },
+    {
+      "id": "roman",
+      "label": "Romane & Krimis"
+    },
+    {
+      "id": "kinder",
+      "label": "Kinder & Familie"
+    },
+    {
+      "id": "sagen",
+      "label": "Mythen & Sagen"
     }
   ],
   "types": [
@@ -100,6 +116,9 @@
       ],
       "related": [
         "tim-urban-procrastinator"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -128,7 +147,10 @@
       "coverSearch": {
         "title": "Thinking, Fast and Slow",
         "author": "Daniel Kahneman"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "sapiens",
@@ -156,7 +178,12 @@
       "coverSearch": {
         "title": "Sapiens",
         "author": "Yuval Noah Harari"
-      }
+      },
+      "lists": [
+        "thomas",
+        "michi"
+      ],
+      "platform": "Google Play Books"
     },
     {
       "id": "deep-work",
@@ -180,6 +207,9 @@
       "related": [
         "makers-schedule",
         "stolen-focus"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -206,7 +236,10 @@
       "coverSearch": {
         "title": "Meditations",
         "author": "Marcus Aurelius"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "psychology-of-money",
@@ -233,7 +266,10 @@
       "coverSearch": {
         "title": "The Psychology of Money",
         "author": "Morgan Housel"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "mans-search-for-meaning",
@@ -258,7 +294,10 @@
       "coverSearch": {
         "title": "Man's Search for Meaning",
         "author": "Viktor Frankl"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "why-we-sleep",
@@ -285,7 +324,10 @@
       "coverSearch": {
         "title": "Why We Sleep",
         "author": "Matthew Walker"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "lean-startup",
@@ -308,6 +350,9 @@
       ],
       "related": [
         "1000-true-fans"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -335,7 +380,10 @@
       "coverSearch": {
         "title": "Zero to One",
         "author": "Peter Thiel"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "factfulness",
@@ -359,6 +407,9 @@
       ],
       "related": [
         "kurzgesagt"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -384,7 +435,10 @@
       "coverSearch": {
         "title": "The Gene",
         "author": "Siddhartha Mukherjee"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "guns-germs-steel",
@@ -408,7 +462,10 @@
       "coverSearch": {
         "title": "Guns, Germs, and Steel",
         "author": "Jared Diamond"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "pragmatic-programmer",
@@ -420,7 +477,8 @@
       "pages": 352,
       "topics": [
         "technologie",
-        "gewohnheiten"
+        "gewohnheiten",
+        "software"
       ],
       "rating": 5,
       "summary": "Ein Klassiker über Handwerk und Haltung in der Softwareentwicklung: Verantwortung übernehmen, Duplikation vermeiden, iterativ arbeiten und die eigenen Werkzeuge beherrschen.",
@@ -435,7 +493,10 @@
       "coverSearch": {
         "title": "The Pragmatic Programmer",
         "author": "Andrew Hunt"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "range",
@@ -463,7 +524,10 @@
       "coverSearch": {
         "title": "Range",
         "author": "David Epstein"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "four-thousand-weeks",
@@ -491,7 +555,10 @@
       "coverSearch": {
         "title": "Four Thousand Weeks",
         "author": "Oliver Burkeman"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "outlive",
@@ -514,6 +581,9 @@
       ],
       "related": [
         "huberman-lab"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -538,7 +608,10 @@
       "coverSearch": {
         "title": "The Almanack of Naval Ravikant",
         "author": "Eric Jorgenson"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "kunst-des-klaren-denkens",
@@ -560,6 +633,9 @@
       ],
       "related": [
         "thinking-fast-and-slow"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -583,7 +659,10 @@
       "coverSearch": {
         "title": "Never Split the Difference",
         "author": "Chris Voss"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "stolen-focus",
@@ -610,7 +689,10 @@
       "coverSearch": {
         "title": "Stolen Focus",
         "author": "Johann Hari"
-      }
+      },
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "huberman-lab",
@@ -633,6 +715,9 @@
       "related": [
         "why-we-sleep",
         "outlive"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -655,6 +740,9 @@
       ],
       "related": [
         "thinking-fast-and-slow"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -674,6 +762,9 @@
         "Ruhige, tiefe Gespräche statt Schlagzeilen.",
         "Deutschsprachig.",
         "Gute Einstiegsfolgen nach Gast auswählen."
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -694,6 +785,9 @@
         "Sehr lange Folgen – eher selektiv hören.",
         "Stark bei Technik- und Wissenschaftsgästen.",
         "Englischsprachig."
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -715,6 +809,9 @@
       ],
       "related": [
         "sapiens"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -738,6 +835,9 @@
       "link": "https://www.youtube.com/@kurzgesagt",
       "related": [
         "factfulness"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -758,7 +858,10 @@
         "Intuition vor Formeln.",
         "Englischsprachig."
       ],
-      "link": "https://www.youtube.com/@3blue1brown"
+      "link": "https://www.youtube.com/@3blue1brown",
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "veritasium",
@@ -777,7 +880,10 @@
         "Viele Experimente vor Ort.",
         "Englischsprachig."
       ],
-      "link": "https://www.youtube.com/@veritasium"
+      "link": "https://www.youtube.com/@veritasium",
+      "lists": [
+        "thomas"
+      ]
     },
     {
       "id": "jobs-stanford",
@@ -801,6 +907,9 @@
       "related": [
         "four-thousand-weeks",
         "the-tail-end"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -826,6 +935,9 @@
       "related": [
         "atomic-habits",
         "the-tail-end"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -851,6 +963,9 @@
       "related": [
         "range",
         "you-and-your-research"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -875,6 +990,9 @@
       "link": "https://paulgraham.com/makersschedule.html",
       "related": [
         "deep-work"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -899,6 +1017,9 @@
       "related": [
         "four-thousand-weeks",
         "jobs-stanford"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -924,6 +1045,9 @@
       "related": [
         "lean-startup",
         "zero-to-one"
+      ],
+      "lists": [
+        "thomas"
       ]
     },
     {
@@ -948,7 +1072,2510 @@
       "related": [
         "range",
         "how-to-do-great-work"
+      ],
+      "lists": [
+        "thomas"
       ]
+    },
+    {
+      "id": "site-reliability-engineering",
+      "type": "audiobook",
+      "title": "Site Reliability Engineering",
+      "author": "Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Wie Google den Betrieb großer Systeme organisiert: Service Level Objectives, Error Budgets, Monitoring, Incident-Management und Automatisierung statt Handarbeit."
+    },
+    {
+      "id": "harry-potter-und-der-stein-der-weisen",
+      "type": "audiobook",
+      "title": "Harry Potter und der Stein der Weisen",
+      "author": "J.K. Rowling",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Harry Potter",
+      "seriesNo": 1,
+      "summary": "Harry Potter, Schüler der Zauberschule Hogwarts, und seine Freunde Ron und Hermine im Kampf gegen den dunklen Magier Voldemort."
+    },
+    {
+      "id": "harry-potter-und-die-kammer-des-schreckens",
+      "type": "audiobook",
+      "title": "Harry Potter und die Kammer des Schreckens",
+      "author": "J.K. Rowling",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Harry Potter",
+      "seriesNo": 2,
+      "summary": "Harry Potter, Schüler der Zauberschule Hogwarts, und seine Freunde Ron und Hermine im Kampf gegen den dunklen Magier Voldemort."
+    },
+    {
+      "id": "harry-potter-und-der-gefangene-von-askaban",
+      "type": "audiobook",
+      "title": "Harry Potter und der Gefangene von Askaban",
+      "author": "J.K. Rowling",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Harry Potter",
+      "seriesNo": 3,
+      "summary": "Harry Potter, Schüler der Zauberschule Hogwarts, und seine Freunde Ron und Hermine im Kampf gegen den dunklen Magier Voldemort."
+    },
+    {
+      "id": "harry-potter-und-der-feuerkelch",
+      "type": "audiobook",
+      "title": "Harry Potter und der Feuerkelch",
+      "author": "J.K. Rowling",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Harry Potter",
+      "seriesNo": 4,
+      "summary": "Harry Potter, Schüler der Zauberschule Hogwarts, und seine Freunde Ron und Hermine im Kampf gegen den dunklen Magier Voldemort."
+    },
+    {
+      "id": "harry-potter-und-der-orden-des-phonix",
+      "type": "audiobook",
+      "title": "Harry Potter und der Orden des Phönix",
+      "author": "J.K. Rowling",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Harry Potter",
+      "seriesNo": 5,
+      "summary": "Harry Potter, Schüler der Zauberschule Hogwarts, und seine Freunde Ron und Hermine im Kampf gegen den dunklen Magier Voldemort."
+    },
+    {
+      "id": "clean-architecture",
+      "type": "audiobook",
+      "title": "Clean Architecture",
+      "author": "Robert C. Martin",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Prinzipien für langlebige Softwarearchitektur: die Abhängigkeitsregel, SOLID auf Komponentenebene und die Trennung der Geschäftslogik von Details wie Datenbank, Framework oder UI."
+    },
+    {
+      "id": "clean-code",
+      "type": "audiobook",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Wie man lesbaren, wartbaren Code schreibt: aussagekräftige Namen, kleine Funktionen, sinnvolle Kommentare, saubere Fehlerbehandlung und kontinuierliches Refactoring."
+    },
+    {
+      "id": "the-clean-coder",
+      "type": "audiobook",
+      "title": "The Clean Coder",
+      "author": "Robert C. Martin",
+      "topics": [
+        "software",
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Über Professionalität in der Softwareentwicklung: Nein sagen, realistisch schätzen, mit Druck umgehen, üben und Verantwortung übernehmen."
+    },
+    {
+      "id": "clean-agile",
+      "type": "audiobook",
+      "title": "Clean Agile",
+      "author": "Robert C. Martin",
+      "topics": [
+        "software",
+        "business"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Eine Rückbesinnung auf die ursprünglichen Werte und Praktiken von Agile – aus Sicht eines Mitunterzeichners des Agilen Manifests."
+    },
+    {
+      "id": "monolith-to-microservices",
+      "type": "audiobook",
+      "title": "Monolith to Microservices",
+      "author": "Sam Newman",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Praxisleitfaden, wie man bestehende Monolithen schrittweise in Microservices zerlegt – mit Mustern wie Strangler Fig und dem schwierigen Thema Datenaufteilung."
+    },
+    {
+      "id": "building-microservices",
+      "type": "audiobook",
+      "title": "Building Microservices",
+      "author": "Sam Newman",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Das Standardwerk zu Microservices: Schnitt von Services, Kommunikation, Deployment, Testing, Beobachtbarkeit, Sicherheit und die passende Organisation."
+    },
+    {
+      "id": "fundamentals-of-software-architecture",
+      "type": "audiobook",
+      "title": "Fundamentals of Software Architecture",
+      "author": "Mark Richards, Neal Ford",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Überblick über Architekturstile, Architektur-Charakteristiken und die Rolle von Architekt:innen – mit dem Leitsatz, dass in der Architektur alles ein Trade-off ist."
+    },
+    {
+      "id": "design-thinking-im-unternehmen",
+      "type": "audiobook",
+      "title": "Design Thinking im Unternehmen",
+      "author": "Ingrid Gerstbach",
+      "topics": [
+        "business"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Einführung, wie Organisationen Design Thinking nutzen, um Probleme konsequent aus Sicht der Nutzer:innen zu lösen."
+    },
+    {
+      "id": "enterprise-design-sprints",
+      "type": "audiobook",
+      "title": "Enterprise Design Sprints",
+      "author": "Richard Banfield",
+      "topics": [
+        "business",
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Wie man Design Sprints in großen Organisationen vorbereitet, durchführt und die Ergebnisse weiterträgt."
+    },
+    {
+      "id": "die-bibel-gelesen-von-rufus-beck",
+      "type": "audiobook",
+      "title": "Die Bibel. Gelesen von Rufus Beck",
+      "author": "Martin Luther",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Die Bibel in der Übersetzung Martin Luthers, gelesen von Rufus Beck."
+    },
+    {
+      "id": "leben-vom-meister-lernen",
+      "type": "audiobook",
+      "title": "Leben vom Meister lernen",
+      "author": "John Mark Comer",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "John Mark Comer über Jüngerschaft: wie man im Alltag Jesus nachfolgt und von ihm lernt."
+    },
+    {
+      "id": "practicing-the-way",
+      "type": "audiobook",
+      "title": "Practicing the Way",
+      "author": "John Mark Comer",
+      "topics": [
+        "glaube",
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Wie man Jesus als Lehrer folgt: bei ihm sein, wie er werden und tun, was er tat – gestützt durch eine gemeinsame Lebensregel und geistliche Praktiken."
+    },
+    {
+      "id": "the-ruthless-elimination-of-hurry",
+      "type": "audiobook",
+      "title": "The Ruthless Elimination of Hurry",
+      "author": "John Mark Comer",
+      "topics": [
+        "glaube",
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Hektik ist der Feind des geistlichen Lebens. Comer schlägt Stille, Sabbat, Einfachheit und Langsamkeit als Gegenmittel vor."
+    },
+    {
+      "id": "live-no-lies",
+      "type": "audiobook",
+      "title": "Live No Lies",
+      "author": "John Mark Comer",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Über die Welt, das Fleisch und den Teufel: wie Lügen unser Denken prägen und wie man ihnen im Alltag widersteht."
+    },
+    {
+      "id": "god-has-a-name",
+      "type": "audiobook",
+      "title": "God Has a Name",
+      "author": "John Mark Comer",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Ausgehend von der Selbstbeschreibung Gottes in 2. Mose 34 fragt Comer, wer Gott ist und wie er wirklich ist."
+    },
+    {
+      "id": "how-to-think",
+      "type": "audiobook",
+      "title": "How to Think",
+      "author": "Alan Jacobs",
+      "topics": [
+        "psychologie",
+        "philosophie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Warum gutes Denken ein sozialer Vorgang ist und wie man in polarisierten Debatten fair, offen und lernbereit bleibt."
+    },
+    {
+      "id": "einfach-gebet",
+      "type": "audiobook",
+      "title": "Einfach Gebet",
+      "author": "Johannes Hartl",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Johannes Hartl über das Gebet: eine praktische, ermutigende Einführung."
+    },
+    {
+      "id": "gott-ungezahmt",
+      "type": "audiobook",
+      "title": "Gott ungezähmt",
+      "author": "Johannes Hartl",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Johannes Hartl über ein Gottesbild, das größer ist als unsere gewohnten Vorstellungen."
+    },
+    {
+      "id": "in-meinem-herzen-feuer",
+      "type": "audiobook",
+      "title": "In meinem Herzen Feuer",
+      "author": "Johannes Hartl",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Ein persönliches Buch von Johannes Hartl über Glauben und Leidenschaft für Gott."
+    },
+    {
+      "id": "die-kunst-des-reifen-handelns",
+      "type": "audiobook",
+      "title": "Die Kunst des reifen Handelns",
+      "author": "Thomas Härry",
+      "topics": [
+        "glaube",
+        "psychologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Thomas Härry über persönliche Reife und darüber, wie man besonnen und verantwortungsvoll handelt."
+    },
+    {
+      "id": "von-der-kunst-sich-selbst-zu-fuhren",
+      "type": "audiobook",
+      "title": "Von der Kunst, sich selbst zu führen",
+      "author": "Thomas Härry",
+      "topics": [
+        "glaube",
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Selbstführung als Grundlage dafür, andere gut zu führen – ein Buch von Thomas Härry."
+    },
+    {
+      "id": "echt-und-stark",
+      "type": "audiobook",
+      "title": "Echt und stark",
+      "author": "Thomas Härry",
+      "topics": [
+        "glaube",
+        "psychologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Thomas Härry über Echtheit und innere Stärke."
+    },
+    {
+      "id": "bully-pulpit",
+      "type": "audiobook",
+      "title": "Bully Pulpit",
+      "author": "Michael J. Kruger",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Über geistlichen Machtmissbrauch in Gemeinden: wie man ihn erkennt, benennt und verhindert."
+    },
+    {
+      "id": "when-church-stops-working",
+      "type": "audiobook",
+      "title": "When Church Stops Working",
+      "author": "Andrew Root",
+      "topics": [
+        "glaube",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Warum Gemeinden in einer beschleunigten Gesellschaft an ihre Grenzen stoßen und wie Hoffnung jenseits neuer Programme aussehen kann."
+    },
+    {
+      "id": "the-gospel-comes-with-a-house-key",
+      "type": "audiobook",
+      "title": "The Gospel Comes with a House Key",
+      "author": "Rosaria Butterfield",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Über radikale, alltägliche Gastfreundschaft als gelebten Glauben."
+    },
+    {
+      "id": "life-without-lack",
+      "type": "audiobook",
+      "title": "Life Without Lack",
+      "author": "Dallas Willard",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Betrachtungen über Psalm 23 und ein Leben im Vertrauen auf Gottes Fürsorge."
+    },
+    {
+      "id": "a-meal-with-jesus",
+      "type": "audiobook",
+      "title": "A Meal with Jesus",
+      "author": "Tim Chester",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Wie Jesus gemeinsame Mahlzeiten nutzte, um Gnade, Gemeinschaft und Mission zu leben."
+    },
+    {
+      "id": "ruckzug-oder-kreuzzug",
+      "type": "audiobook",
+      "title": "Rückzug oder Kreuzzug?",
+      "author": "Michael Blume",
+      "topics": [
+        "glaube",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Der Religionswissenschaftler Michael Blume über die Krise der Religionen in der Gegenwart."
+    },
+    {
+      "id": "tiefenpsychologie-fur-dummies",
+      "type": "audiobook",
+      "title": "Tiefenpsychologie für Dummies",
+      "author": "Timo Storck",
+      "topics": [
+        "psychologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Verständliche Einführung in die Tiefenpsychologie: das Unbewusste, Abwehrmechanismen und psychodynamische Therapie."
+    },
+    {
+      "id": "raus-aus-der-mental-load-falle",
+      "type": "audiobook",
+      "title": "Raus aus der Mental Load-Falle",
+      "author": "Patricia Cammarata",
+      "topics": [
+        "gewohnheiten",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Über die unsichtbare Denk- und Organisationsarbeit in Familien und wie eine gerechte Aufteilung gelingt."
+    },
+    {
+      "id": "essentialismus",
+      "type": "audiobook",
+      "title": "Essentialismus",
+      "author": "Greg McKeown",
+      "topics": [
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Weniger, aber besser: sich konsequent auf das Wesentliche konzentrieren und bewusst Nein zum Rest sagen."
+    },
+    {
+      "id": "das-wichtigste-wissen",
+      "type": "audiobook",
+      "title": "Das wichtigste Wissen",
+      "author": "Ernst Peter Fischer",
+      "topics": [
+        "wissenschaft"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Der Wissenschaftshistoriker Ernst Peter Fischer über zentrale Erkenntnisse der Naturwissenschaften."
+    },
+    {
+      "id": "des-sokrates-verteidigung",
+      "type": "audiobook",
+      "title": "Des Sokrates Verteidigung",
+      "author": "Platon",
+      "topics": [
+        "philosophie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Platons Darstellung der Verteidigungsrede des Sokrates vor dem Gericht in Athen, das ihn zum Tod verurteilte."
+    },
+    {
+      "id": "1984",
+      "type": "audiobook",
+      "title": "1984",
+      "author": "George Orwell",
+      "topics": [
+        "roman",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Orwells Dystopie über einen totalitären Überwachungsstaat, in dem „Big Brother“ alles sieht und selbst die Sprache kontrolliert wird."
+    },
+    {
+      "id": "die-kanguru-werke-die-kanguru-chroniken",
+      "type": "audiobook",
+      "title": "Die Känguru-Chroniken",
+      "author": "Marc-Uwe Kling",
+      "topics": [
+        "roman"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Känguru-Werke",
+      "seriesNo": 1,
+      "summary": "Marc-Uwe wohnt mit einem kommunistischen Känguru zusammen – absurde, sehr lustige Alltagsgeschichten."
+    },
+    {
+      "id": "die-kanguru-werke-das-kanguru-manifest",
+      "type": "audiobook",
+      "title": "Das Känguru-Manifest",
+      "author": "Marc-Uwe Kling",
+      "topics": [
+        "roman"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Känguru-Werke",
+      "seriesNo": 2,
+      "summary": "Marc-Uwe wohnt mit einem kommunistischen Känguru zusammen – absurde, sehr lustige Alltagsgeschichten."
+    },
+    {
+      "id": "achtsam-morden",
+      "type": "audiobook",
+      "title": "Achtsam morden",
+      "author": "Karsten Dusse",
+      "topics": [
+        "roman"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Ein gestresster Anwalt lernt im Achtsamkeitskurs Gelassenheit – und wendet die Techniken auf sehr ungewöhnliche Weise an. Schwarzhumoriger Krimi."
+    },
+    {
+      "id": "diabolus",
+      "type": "audiobook",
+      "title": "Diabolus",
+      "author": "Dan Brown",
+      "topics": [
+        "roman"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Thriller um die NSA, einen angeblich unknackbaren Code und die Frage nach Überwachung und Privatsphäre."
+    },
+    {
+      "id": "das-verlorene-symbol",
+      "type": "audiobook",
+      "title": "Das verlorene Symbol",
+      "author": "Dan Brown",
+      "topics": [
+        "roman"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Robert Langdon folgt in Washington, D.C., den Spuren der Freimaurer."
+    },
+    {
+      "id": "der-hobbit",
+      "type": "audiobook",
+      "title": "Der Hobbit",
+      "author": "J.R.R. Tolkien",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Der Hobbit Bilbo Beutlin zieht mit dreizehn Zwergen und dem Zauberer Gandalf los, um den Schatz des Drachen Smaug zurückzuholen."
+    },
+    {
+      "id": "der-herr-der-ringe-die-gefahrten",
+      "type": "audiobook",
+      "title": "Die Gefährten",
+      "author": "J.R.R. Tolkien",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Der Herr der Ringe",
+      "seriesNo": 1,
+      "summary": "Tolkiens Epos um den Hobbit Frodo, der den Einen Ring nach Mordor tragen muss, um ihn zu zerstören."
+    },
+    {
+      "id": "der-herr-der-ringe-die-zwei-turme",
+      "type": "audiobook",
+      "title": "Die zwei Türme",
+      "author": "J.R.R. Tolkien",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Der Herr der Ringe",
+      "seriesNo": 2,
+      "summary": "Tolkiens Epos um den Hobbit Frodo, der den Einen Ring nach Mordor tragen muss, um ihn zu zerstören."
+    },
+    {
+      "id": "der-herr-der-ringe-die-wiederkehr-des-konigs",
+      "type": "audiobook",
+      "title": "Die Wiederkehr des Königs",
+      "author": "J.R.R. Tolkien",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Der Herr der Ringe",
+      "seriesNo": 3,
+      "summary": "Tolkiens Epos um den Hobbit Frodo, der den Einen Ring nach Mordor tragen muss, um ihn zu zerstören."
+    },
+    {
+      "id": "die-abenteuer-des-tom-bombadil",
+      "type": "audiobook",
+      "title": "Die Abenteuer des Tom Bombadil",
+      "author": "J.R.R. Tolkien",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Gedichte aus Mittelerde rund um den rätselhaften Tom Bombadil."
+    },
+    {
+      "id": "die-magie-der-tausend-welten",
+      "type": "audiobook",
+      "title": "Die Magie der tausend Welten",
+      "author": "Trudi Canavan",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Magie der tausend Welten",
+      "summary": "Trudi Canavans Saga über eine Vielzahl von Welten, in denen Magie eine begrenzte Ressource ist."
+    },
+    {
+      "id": "die-magie-der-tausend-welten-die-machtige",
+      "type": "audiobook",
+      "title": "Die Mächtige",
+      "author": "Trudi Canavan",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Magie der tausend Welten",
+      "seriesNo": 3,
+      "summary": "Trudi Canavans Saga über eine Vielzahl von Welten, in denen Magie eine begrenzte Ressource ist."
+    },
+    {
+      "id": "die-magie-der-tausend-welten-die-schopferin",
+      "type": "audiobook",
+      "title": "Die Schöpferin",
+      "author": "Trudi Canavan",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Magie der tausend Welten",
+      "seriesNo": 4,
+      "summary": "Trudi Canavans Saga über eine Vielzahl von Welten, in denen Magie eine begrenzte Ressource ist."
+    },
+    {
+      "id": "sonea-1",
+      "type": "audiobook",
+      "title": "Sonea 1",
+      "author": "Trudi Canavan",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Sonea",
+      "seriesNo": 1,
+      "summary": "Fortsetzung von Trudi Canavans „Gilde der Schwarzen Magier“: Sonea ist inzwischen Schwarzmagierin in Kyralia."
+    },
+    {
+      "id": "sonea-2",
+      "type": "audiobook",
+      "title": "Sonea 2",
+      "author": "Trudi Canavan",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Sonea",
+      "seriesNo": 2,
+      "summary": "Fortsetzung von Trudi Canavans „Gilde der Schwarzen Magier“: Sonea ist inzwischen Schwarzmagierin in Kyralia."
+    },
+    {
+      "id": "sonea-3",
+      "type": "audiobook",
+      "title": "Sonea 3",
+      "author": "Trudi Canavan",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Sonea",
+      "seriesNo": 3,
+      "summary": "Fortsetzung von Trudi Canavans „Gilde der Schwarzen Magier“: Sonea ist inzwischen Schwarzmagierin in Kyralia."
+    },
+    {
+      "id": "das-lied-des-blutes",
+      "type": "audiobook",
+      "title": "Das Lied des Blutes",
+      "author": "Anthony Ryan",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Vaelin Al Sorna wächst in einem kriegerischen Orden auf und wird in Kriege und Intrigen gezogen, die sein Reich erschüttern."
+    },
+    {
+      "id": "der-aufstand-der-drachen-von-konigen-und-zauberern-band-1",
+      "type": "audiobook",
+      "title": "Der Aufstand der Drachen: Von Königen und Zauberern – Band 1",
+      "author": "Morgan Rice",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Auftakt einer Fantasy-Reihe um Könige, Zauberer und Drachen."
+    },
+    {
+      "id": "die-zwerge",
+      "type": "audiobook",
+      "title": "Die Zwerge",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Zwerge",
+      "seriesNo": 1,
+      "summary": "Heitz' Fantasy-Saga um den Zwerg Tungdil und die Völker des Geborgenen Landes."
+    },
+    {
+      "id": "die-zwerge-der-krieg-der-zwerge",
+      "type": "audiobook",
+      "title": "Der Krieg der Zwerge",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Zwerge",
+      "seriesNo": 2,
+      "summary": "Heitz' Fantasy-Saga um den Zwerg Tungdil und die Völker des Geborgenen Landes."
+    },
+    {
+      "id": "die-zwerge-die-rache-der-zwerge",
+      "type": "audiobook",
+      "title": "Die Rache der Zwerge",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Zwerge",
+      "seriesNo": 3,
+      "summary": "Heitz' Fantasy-Saga um den Zwerg Tungdil und die Völker des Geborgenen Landes."
+    },
+    {
+      "id": "die-zwerge-das-schicksal-der-zwerge",
+      "type": "audiobook",
+      "title": "Das Schicksal der Zwerge",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Zwerge",
+      "seriesNo": 4,
+      "summary": "Heitz' Fantasy-Saga um den Zwerg Tungdil und die Völker des Geborgenen Landes."
+    },
+    {
+      "id": "die-zwerge-der-triumph-der-zwerge",
+      "type": "audiobook",
+      "title": "Der Triumph der Zwerge",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Zwerge",
+      "seriesNo": 5,
+      "summary": "Heitz' Fantasy-Saga um den Zwerg Tungdil und die Völker des Geborgenen Landes."
+    },
+    {
+      "id": "die-ruckkehr-der-zwerge-1",
+      "type": "audiobook",
+      "title": "Die Rückkehr der Zwerge 1",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Rückkehr der Zwerge",
+      "seriesNo": 1,
+      "summary": "Neue Abenteuer aus dem Geborgenen Land – Fortsetzung von Markus Heitz' Zwerge-Saga."
+    },
+    {
+      "id": "die-ruckkehr-der-zwerge-2",
+      "type": "audiobook",
+      "title": "Die Rückkehr der Zwerge 2",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Rückkehr der Zwerge",
+      "seriesNo": 2,
+      "summary": "Neue Abenteuer aus dem Geborgenen Land – Fortsetzung von Markus Heitz' Zwerge-Saga."
+    },
+    {
+      "id": "das-herz-der-zwerge-1",
+      "type": "audiobook",
+      "title": "Das Herz der Zwerge 1",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Das Herz der Zwerge",
+      "seriesNo": 1,
+      "summary": "Weitere Geschichten aus Markus Heitz' Zwerge-Welt."
+    },
+    {
+      "id": "das-herz-der-zwerge-2",
+      "type": "audiobook",
+      "title": "Das Herz der Zwerge 2",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Das Herz der Zwerge",
+      "seriesNo": 2,
+      "summary": "Weitere Geschichten aus Markus Heitz' Zwerge-Welt."
+    },
+    {
+      "id": "die-legenden-der-albae-gerechter-zorn",
+      "type": "audiobook",
+      "title": "Gerechter Zorn",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Legenden der Albae",
+      "seriesNo": 1,
+      "summary": "Die dunkle Seite von Heitz' Zwerge-Welt: erzählt aus Sicht der Albae, der gefürchteten Gegenspieler aus dem Geborgenen Land."
+    },
+    {
+      "id": "die-legenden-der-albae-vernichtender-hass",
+      "type": "audiobook",
+      "title": "Vernichtender Hass",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Legenden der Albae",
+      "seriesNo": 2,
+      "summary": "Die dunkle Seite von Heitz' Zwerge-Welt: erzählt aus Sicht der Albae, der gefürchteten Gegenspieler aus dem Geborgenen Land."
+    },
+    {
+      "id": "die-legenden-der-albae-dunkle-pfade",
+      "type": "audiobook",
+      "title": "Dunkle Pfade",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Legenden der Albae",
+      "seriesNo": 3,
+      "summary": "Die dunkle Seite von Heitz' Zwerge-Welt: erzählt aus Sicht der Albae, der gefürchteten Gegenspieler aus dem Geborgenen Land."
+    },
+    {
+      "id": "die-legenden-der-albae-tobender-sturm",
+      "type": "audiobook",
+      "title": "Tobender Sturm",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Legenden der Albae",
+      "seriesNo": 4,
+      "summary": "Die dunkle Seite von Heitz' Zwerge-Welt: erzählt aus Sicht der Albae, der gefürchteten Gegenspieler aus dem Geborgenen Land."
+    },
+    {
+      "id": "die-legenden-der-albae-die-vergessenen-schriften",
+      "type": "audiobook",
+      "title": "Die vergessenen Schriften",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Legenden der Albae",
+      "summary": "Die dunkle Seite von Heitz' Zwerge-Welt: erzählt aus Sicht der Albae, der gefürchteten Gegenspieler aus dem Geborgenen Land."
+    },
+    {
+      "id": "schatten-uber-ulldart",
+      "type": "audiobook",
+      "title": "Schatten über Ulldart",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 1,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "ulldart-der-orden-der-schwerter",
+      "type": "audiobook",
+      "title": "Der Orden der Schwerter",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 2,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "ulldart-das-zeichen-des-dunklen-gottes",
+      "type": "audiobook",
+      "title": "Das Zeichen des dunklen Gottes",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 3,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "ulldart-unter-den-augen-tzulans",
+      "type": "audiobook",
+      "title": "Unter den Augen Tzulans",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 4,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "ulldart-die-magie-des-herrschers",
+      "type": "audiobook",
+      "title": "Die Magie des Herrschers",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 5,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "ulldart-die-quellen-des-bosen",
+      "type": "audiobook",
+      "title": "Die Quellen des Bösen",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 6,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "ulldart-trugerischer-friede",
+      "type": "audiobook",
+      "title": "Trügerischer Friede",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 7,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "ulldart-brennende-kontinente",
+      "type": "audiobook",
+      "title": "Brennende Kontinente",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 8,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "ulldart-fatales-vermachtnis",
+      "type": "audiobook",
+      "title": "Fatales Vermächtnis",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Ulldart",
+      "seriesNo": 9,
+      "summary": "Epische Fantasy-Saga um den Thronfolger Lodrik und die Prophezeiung von der Rückkehr des dunklen Gottes Tzulan."
+    },
+    {
+      "id": "die-drachen-reihe-die-machte-des-feuers",
+      "type": "audiobook",
+      "title": "Die Mächte des Feuers",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Drachen-Reihe",
+      "seriesNo": 1,
+      "summary": "Alternative Geschichte im frühen 20. Jahrhundert: Drachen existieren, und Drachentöter sind gefragte Helden."
+    },
+    {
+      "id": "die-drachen-reihe-drachenkaiser",
+      "type": "audiobook",
+      "title": "Drachenkaiser",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Drachen-Reihe",
+      "seriesNo": 2,
+      "summary": "Alternative Geschichte im frühen 20. Jahrhundert: Drachen existieren, und Drachentöter sind gefragte Helden."
+    },
+    {
+      "id": "die-drachen-reihe-drachengift",
+      "type": "audiobook",
+      "title": "Drachengift",
+      "author": "Markus Heitz",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Drachen-Reihe",
+      "seriesNo": 3,
+      "summary": "Alternative Geschichte im frühen 20. Jahrhundert: Drachen existieren, und Drachentöter sind gefragte Helden."
+    },
+    {
+      "id": "eragon-das-vermachtnis-der-drachenreiter",
+      "type": "audiobook",
+      "title": "Das Vermächtnis der Drachenreiter",
+      "author": "Christopher Paolini",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Eragon",
+      "seriesNo": 1,
+      "summary": "Der Bauernjunge Eragon findet ein Drachenei, wird Drachenreiter und stellt sich König Galbatorix entgegen."
+    },
+    {
+      "id": "eragon-der-auftrag-des-altesten",
+      "type": "audiobook",
+      "title": "Der Auftrag des Ältesten",
+      "author": "Christopher Paolini",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Eragon",
+      "seriesNo": 2,
+      "summary": "Der Bauernjunge Eragon findet ein Drachenei, wird Drachenreiter und stellt sich König Galbatorix entgegen."
+    },
+    {
+      "id": "eragon-die-weisheit-des-feuers",
+      "type": "audiobook",
+      "title": "Die Weisheit des Feuers",
+      "author": "Christopher Paolini",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Eragon",
+      "seriesNo": 3,
+      "summary": "Der Bauernjunge Eragon findet ein Drachenei, wird Drachenreiter und stellt sich König Galbatorix entgegen."
+    },
+    {
+      "id": "eragon-das-erbe-der-macht",
+      "type": "audiobook",
+      "title": "Das Erbe der Macht",
+      "author": "Christopher Paolini",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Eragon",
+      "seriesNo": 4,
+      "summary": "Der Bauernjunge Eragon findet ein Drachenei, wird Drachenreiter und stellt sich König Galbatorix entgegen."
+    },
+    {
+      "id": "eragon-die-gabel-die-hexe-und-der-wurm",
+      "type": "audiobook",
+      "title": "Die Gabel, die Hexe und der Wurm",
+      "author": "Christopher Paolini",
+      "topics": [
+        "fantasy",
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Eragon",
+      "summary": "Geschichten aus Alagaësia, Band 1: drei Erzählungen, die ein Jahr nach dem Ende der Eragon-Saga spielen."
+    },
+    {
+      "id": "gotrek-und-felix-1",
+      "type": "audiobook",
+      "title": "Gotrek und Felix 1",
+      "author": "William King",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Gotrek und Felix",
+      "seriesNo": 1,
+      "summary": "Warhammer-Klassiker: Der Zwergen-Slayer Gotrek sucht einen ruhmreichen Tod, sein Gefährte Felix soll seine Taten festhalten."
+    },
+    {
+      "id": "gotrek-und-felix-2",
+      "type": "audiobook",
+      "title": "Gotrek und Felix 2",
+      "author": "William King",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Gotrek und Felix",
+      "seriesNo": 2,
+      "summary": "Warhammer-Klassiker: Der Zwergen-Slayer Gotrek sucht einen ruhmreichen Tod, sein Gefährte Felix soll seine Taten festhalten."
+    },
+    {
+      "id": "gotrek-und-felix-3",
+      "type": "audiobook",
+      "title": "Gotrek und Felix 3",
+      "author": "William King",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Gotrek und Felix",
+      "seriesNo": 3,
+      "summary": "Warhammer-Klassiker: Der Zwergen-Slayer Gotrek sucht einen ruhmreichen Tod, sein Gefährte Felix soll seine Taten festhalten."
+    },
+    {
+      "id": "gotrek-1",
+      "type": "audiobook",
+      "title": "Gotrek 1",
+      "author": "Darius Hinks",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Gotrek",
+      "seriesNo": 1,
+      "summary": "Gotrek, der Zwergen-Slayer, in den Mortal Realms von Warhammer Age of Sigmar."
+    },
+    {
+      "id": "gotrek-2",
+      "type": "audiobook",
+      "title": "Gotrek 2",
+      "author": "Darius Hinks",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Gotrek",
+      "seriesNo": 2,
+      "summary": "Gotrek, der Zwergen-Slayer, in den Mortal Realms von Warhammer Age of Sigmar."
+    },
+    {
+      "id": "gotrek-3",
+      "type": "audiobook",
+      "title": "Gotrek 3",
+      "author": "Darius Hinks",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Gotrek",
+      "seriesNo": 3,
+      "summary": "Gotrek, der Zwergen-Slayer, in den Mortal Realms von Warhammer Age of Sigmar."
+    },
+    {
+      "id": "nagash-1",
+      "type": "audiobook",
+      "title": "Nagash 1",
+      "author": "Mike Lee",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Nagash",
+      "seriesNo": 1,
+      "summary": "Warhammer-Saga über den Aufstieg des Nekromanten Nagash im alten Nehekhara."
+    },
+    {
+      "id": "nagash-2",
+      "type": "audiobook",
+      "title": "Nagash 2",
+      "author": "Mike Lee",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Nagash",
+      "seriesNo": 2,
+      "summary": "Warhammer-Saga über den Aufstieg des Nekromanten Nagash im alten Nehekhara."
+    },
+    {
+      "id": "nagash-3",
+      "type": "audiobook",
+      "title": "Nagash 3",
+      "author": "Mike Lee",
+      "topics": [
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Nagash",
+      "seriesNo": 3,
+      "summary": "Warhammer-Saga über den Aufstieg des Nekromanten Nagash im alten Nehekhara."
+    },
+    {
+      "id": "griechische-mythologie-fur-kinder-gotter-des-olymp",
+      "type": "audiobook",
+      "title": "Götter des Olymp",
+      "author": "Dimiter Inkiow",
+      "topics": [
+        "kinder",
+        "sagen"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Griechische Mythologie für Kinder",
+      "summary": "Dimiter Inkiow erzählt Mythen und Sagen der Antike kindgerecht und mit viel Humor."
+    },
+    {
+      "id": "griechische-mythologie-fur-kinder-die-heldentaten-des-herkul",
+      "type": "audiobook",
+      "title": "Die Heldentaten des Herkules",
+      "author": "Dimiter Inkiow",
+      "topics": [
+        "kinder",
+        "sagen"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Griechische Mythologie für Kinder",
+      "summary": "Dimiter Inkiow erzählt Mythen und Sagen der Antike kindgerecht und mit viel Humor."
+    },
+    {
+      "id": "griechische-mythologie-fur-kinder-die-spannendsten-griechisc",
+      "type": "audiobook",
+      "title": "Die spannendsten griechischen Sagen",
+      "author": "Dimiter Inkiow",
+      "topics": [
+        "kinder",
+        "sagen"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Griechische Mythologie für Kinder",
+      "summary": "Dimiter Inkiow erzählt Mythen und Sagen der Antike kindgerecht und mit viel Humor."
+    },
+    {
+      "id": "griechische-mythologie-fur-kinder-die-grosse-horbuchbox-der-",
+      "type": "audiobook",
+      "title": "Die große Hörbuchbox der griechischen Sagen",
+      "author": "Dimiter Inkiow, Susanne Inkiow",
+      "topics": [
+        "kinder",
+        "sagen"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Griechische Mythologie für Kinder",
+      "summary": "Dimiter Inkiow erzählt Mythen und Sagen der Antike kindgerecht und mit viel Humor."
+    },
+    {
+      "id": "griechische-mythologie-fur-kinder-aesops-fabeln-oder-die-wei",
+      "type": "audiobook",
+      "title": "Aesops Fabeln oder Die Weisheit der Antike",
+      "author": "Dimiter Inkiow",
+      "topics": [
+        "kinder",
+        "sagen"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Griechische Mythologie für Kinder",
+      "summary": "Dimiter Inkiow erzählt Mythen und Sagen der Antike kindgerecht und mit viel Humor."
+    },
+    {
+      "id": "europaische-sagen",
+      "type": "audiobook",
+      "title": "Europäische Sagen",
+      "author": "Dimiter Inkiow",
+      "topics": [
+        "kinder",
+        "sagen"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Dimiter Inkiow erzählt bekannte Sagen aus ganz Europa für Kinder nach."
+    },
+    {
+      "id": "die-bibel-dimiter-inkiow-die-geschichten-des-alten-testament",
+      "type": "audiobook",
+      "title": "Die Geschichten des Alten Testaments",
+      "author": "Dimiter Inkiow",
+      "topics": [
+        "kinder",
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Bibel (Dimiter Inkiow)",
+      "summary": "Biblische Geschichten, von Dimiter Inkiow für Kinder nacherzählt."
+    },
+    {
+      "id": "die-bibel-dimiter-inkiow-die-geschichten-des-neuen-testament",
+      "type": "audiobook",
+      "title": "Die Geschichten des Neuen Testaments",
+      "author": "Dimiter Inkiow",
+      "topics": [
+        "kinder",
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Bibel (Dimiter Inkiow)",
+      "summary": "Biblische Geschichten, von Dimiter Inkiow für Kinder nacherzählt."
+    },
+    {
+      "id": "die-bibel-dimiter-inkiow-geschichten-aus-dem-alten-und-neuen",
+      "type": "audiobook",
+      "title": "Geschichten aus dem Alten und Neuen Testament",
+      "author": "Dimiter Inkiow",
+      "topics": [
+        "kinder",
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Die Bibel (Dimiter Inkiow)",
+      "summary": "Biblische Geschichten, von Dimiter Inkiow für Kinder nacherzählt."
+    },
+    {
+      "id": "die-schonsten-gutenacht-geschichten-fur-die-kleinen",
+      "type": "audiobook",
+      "title": "Die schönsten Gutenacht-Geschichten für die Kleinen",
+      "author": "Dimiter Inkiow, Paul Maar, Isabel Abedi u. a.",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Sammlung von Gutenacht-Geschichten für kleine Kinder – von Klassikern wie den Brüdern Grimm bis zu Paul Maar und Isabel Abedi."
+    },
+    {
+      "id": "best-of-geschichten-fur-kinder",
+      "type": "audiobook",
+      "title": "Best of Geschichten für Kinder",
+      "author": "Dimiter Inkiow, Cornelia Funke, Paul Maar u. a.",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Beliebte Kindergeschichten bekannter Autor:innen wie Cornelia Funke, Paul Maar, Kirsten Boie und Janosch."
+    },
+    {
+      "id": "gruselig-geschichten-gedichte-und-lieder-fur-die-kleinen",
+      "type": "audiobook",
+      "title": "Gruselig! Geschichten, Gedichte und Lieder für die Kleinen",
+      "author": "Paul Maar, Dimiter Inkiow, Sandra Grimm",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Ein bisschen schaurige, kindgerechte Geschichten, Gedichte und Lieder."
+    },
+    {
+      "id": "digedags-romer-serie-circus-digedag",
+      "type": "audiobook",
+      "title": "Circus Digedag",
+      "author": "Hannes Hegen",
+      "topics": [
+        "kinder",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Digedags – Römer-Serie",
+      "seriesNo": 1,
+      "summary": "Die Digedags Dig, Dag und Digedag erleben Abenteuer im alten Rom – Hörspiel nach den Mosaik-Comics von Hannes Hegen."
+    },
+    {
+      "id": "digedags-romer-serie-verschworung-in-rom",
+      "type": "audiobook",
+      "title": "Verschwörung in Rom",
+      "author": "Hannes Hegen",
+      "topics": [
+        "kinder",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Digedags – Römer-Serie",
+      "seriesNo": 2,
+      "summary": "Die Digedags Dig, Dag und Digedag erleben Abenteuer im alten Rom – Hörspiel nach den Mosaik-Comics von Hannes Hegen."
+    },
+    {
+      "id": "digedags-romer-serie-die-seeschlacht",
+      "type": "audiobook",
+      "title": "Die Seeschlacht",
+      "author": "Hannes Hegen",
+      "topics": [
+        "kinder",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Digedags – Römer-Serie",
+      "seriesNo": 3,
+      "summary": "Die Digedags Dig, Dag und Digedag erleben Abenteuer im alten Rom – Hörspiel nach den Mosaik-Comics von Hannes Hegen."
+    },
+    {
+      "id": "titus-die-toga-rutscht-wie-die-alten-romer-lebten",
+      "type": "audiobook",
+      "title": "Titus, die Toga rutscht! – Wie die alten Römer lebten",
+      "author": "Katalina Präkelt, Volker Präkelt",
+      "topics": [
+        "kinder",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Unterhaltsames Sachhörbuch über den Alltag im alten Rom."
+    },
+    {
+      "id": "wieso-weshalb-warum-bei-den-romern",
+      "type": "audiobook",
+      "title": "Bei den Römern",
+      "author": "Wolfgang Metzger",
+      "topics": [
+        "kinder",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Wieso? Weshalb? Warum?",
+      "seriesNo": 30,
+      "summary": "Kindgerechtes Sachwissen aus der bekannten Reihe von Ravensburger."
+    },
+    {
+      "id": "wieso-weshalb-warum-alles-uber-einsatzkrafte",
+      "type": "audiobook",
+      "title": "Alles über Einsatzkräfte",
+      "author": "Andrea Erne",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Wieso? Weshalb? Warum?",
+      "summary": "Kindgerechtes Sachwissen aus der bekannten Reihe von Ravensburger."
+    },
+    {
+      "id": "wieso-weshalb-warum-erstleser-vulkane",
+      "type": "audiobook",
+      "title": "Vulkane",
+      "author": "Sandra Noa, Peter Friedl",
+      "topics": [
+        "kinder",
+        "wissenschaft"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Wieso? Weshalb? Warum? Erstleser",
+      "seriesNo": 2,
+      "summary": "Sachwissen für Leseanfänger:innen aus der bekannten Kinderwissens-Reihe."
+    },
+    {
+      "id": "wieso-weshalb-warum-erstleser-wale-und-delfine",
+      "type": "audiobook",
+      "title": "Wale und Delfine",
+      "author": "Sandra Noa, Astrid Vohwinkel",
+      "topics": [
+        "kinder",
+        "wissenschaft"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Wieso? Weshalb? Warum? Erstleser",
+      "seriesNo": 3,
+      "summary": "Sachwissen für Leseanfänger:innen aus der bekannten Kinderwissens-Reihe."
+    },
+    {
+      "id": "wieso-weshalb-warum-erstleser-weltraum",
+      "type": "audiobook",
+      "title": "Weltraum",
+      "author": "Carola von Kessel",
+      "topics": [
+        "kinder",
+        "wissenschaft"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Wieso? Weshalb? Warum? Erstleser",
+      "seriesNo": 4,
+      "summary": "Sachwissen für Leseanfänger:innen aus der bekannten Kinderwissens-Reihe."
+    },
+    {
+      "id": "wieso-weshalb-warum-erstleser-pferde",
+      "type": "audiobook",
+      "title": "Pferde",
+      "author": "Carola von Kessel",
+      "topics": [
+        "kinder",
+        "wissenschaft"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Wieso? Weshalb? Warum? Erstleser",
+      "seriesNo": 6,
+      "summary": "Sachwissen für Leseanfänger:innen aus der bekannten Kinderwissens-Reihe."
+    },
+    {
+      "id": "dork-diaries-nikkis-nicht-ganz-so-phanomenaler-auftritt",
+      "type": "audiobook",
+      "title": "DORK Diaries – Nikkis (nicht ganz so) phänomenaler Auftritt",
+      "author": "Rachel Renée Russell",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Nikki Maxwell erzählt in ihrem Tagebuch vom chaotischen Schulalltag – witzig und mit vielen Peinlichkeiten."
+    },
+    {
+      "id": "so-werde-ich-cool-der-tag-an-dem-ich-cool-wurde",
+      "type": "audiobook",
+      "title": "Der Tag, an dem ich cool wurde",
+      "author": "Juma Kliebenstein",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "So werde ich cool",
+      "summary": "Humorvolle Kinderbuchreihe von Juma Kliebenstein über den Versuch, endlich cool zu werden."
+    },
+    {
+      "id": "so-werde-ich-cool-die-nacht-in-der-ich-supercool-wurde",
+      "type": "audiobook",
+      "title": "Die Nacht, in der ich supercool wurde",
+      "author": "Juma Kliebenstein",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "So werde ich cool",
+      "summary": "Humorvolle Kinderbuchreihe von Juma Kliebenstein über den Versuch, endlich cool zu werden."
+    },
+    {
+      "id": "das-magische-baumhaus-das-tor-zur-dracheninsel",
+      "type": "audiobook",
+      "title": "Das Tor zur Dracheninsel",
+      "author": "Mary Pope Osborne",
+      "topics": [
+        "kinder",
+        "fantasy"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Das magische Baumhaus",
+      "seriesNo": 53,
+      "summary": "Die Geschwister Anne und Philipp reisen mit einem magischen Baumhaus in andere Zeiten und Länder."
+    },
+    {
+      "id": "das-neinhorn",
+      "type": "audiobook",
+      "title": "Das NEINhorn",
+      "author": "Marc-Uwe Kling",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Das NEINhorn",
+      "seriesNo": 1,
+      "summary": "Ein kleines Einhorn, das zu allem Nein sagt – Marc-Uwe Klings Kinderbuch-Hit."
+    },
+    {
+      "id": "das-neinhorn-und-die-schlangeweile",
+      "type": "audiobook",
+      "title": "Das NEINhorn und die SchLANGEWEILE",
+      "author": "Marc-Uwe Kling",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Das NEINhorn",
+      "summary": "Ein kleines Einhorn, das zu allem Nein sagt – Marc-Uwe Klings Kinderbuch-Hit."
+    },
+    {
+      "id": "der-kleine-drache-kokosnuss-vulkan-alarm-auf-der-dracheninse",
+      "type": "audiobook",
+      "title": "Vulkan-Alarm auf der Dracheninsel",
+      "author": "Ingo Siegner",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Der kleine Drache Kokosnuss",
+      "summary": "Abenteuer des kleinen Feuerdrachen Kokosnuss und seiner Freunde auf der Dracheninsel."
+    },
+    {
+      "id": "der-kleine-drache-kokosnuss-das-song-album-zum-film",
+      "type": "audiobook",
+      "title": "Das Song-Album zum Film",
+      "author": "Der kleine Drache Kokosnuss",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "series": "Der kleine Drache Kokosnuss",
+      "summary": "Die Lieder aus dem Kinofilm über den kleinen Drachen Kokosnuss."
+    },
+    {
+      "id": "mein-lotta-leben-das-reinste-katzentheater",
+      "type": "audiobook",
+      "title": "Mein Lotta-Leben. Das reinste Katzentheater",
+      "author": "Alice Pantermüller",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Lotta erzählt in ihrem Tagebuch lustig und chaotisch von Schule, Familie und besten Freundinnen."
+    },
+    {
+      "id": "sie-folgten-einem-hellen-stern",
+      "type": "audiobook",
+      "title": "Sie folgten einem hellen Stern",
+      "author": "Gudrun Pausewang",
+      "topics": [
+        "kinder",
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Eine weihnachtliche Erzählung von Gudrun Pausewang."
+    },
+    {
+      "id": "weisst-du-eigentlich-wie-lieb-ich-dich-hab-neue-geschichten",
+      "type": "audiobook",
+      "title": "Weißt du eigentlich, wie lieb ich dich hab? – Neue Geschichten",
+      "author": "Sam McBratney, Anita Jeram",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Neue Geschichten vom kleinen und großen Hasen zum Kuscheln und Zuhören, mit Musik."
+    },
+    {
+      "id": "practicing-the-way-podcast",
+      "type": "podcast",
+      "title": "Practicing the Way",
+      "author": "John Mark Comer",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Podcast rund um die Practicing-the-Way-Bewegung: Jüngerschaft, geistliche Praktiken und ein Leben in der Nachfolge Jesu.",
+      "related": [
+        "practicing-the-way"
+      ]
+    },
+    {
+      "id": "practicing-the-way-course",
+      "type": "podcast",
+      "title": "Practicing the Way – Be with Jesus, Become like him, Do as he did",
+      "author": "Practicing the Way",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Begleitende Folgen zum Practicing-the-Way-Kurs über die drei Ziele der Nachfolge: bei Jesus sein, wie er werden, tun, was er tat.",
+      "related": [
+        "practicing-the-way"
+      ]
+    },
+    {
+      "id": "rule-of-life-podcast",
+      "type": "podcast",
+      "title": "Rule of Life",
+      "author": "Practicing the Way",
+      "format": "Podcast",
+      "topics": [
+        "glaube",
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Podcast-Serie über eine persönliche Lebensregel: Rhythmen und Praktiken, die Raum für ein geistliches Leben schaffen.",
+      "related": [
+        "practicing-the-way"
+      ]
+    },
+    {
+      "id": "live-no-lies-podcast",
+      "type": "podcast",
+      "title": "Live No Lies Podcast",
+      "author": "John Mark Comer",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Der Podcast zum Buch „Live No Lies“ über die Lügen von Welt, Fleisch und Teufel.",
+      "related": [
+        "live-no-lies"
+      ]
+    },
+    {
+      "id": "fight-hustle-end-hurry",
+      "type": "podcast",
+      "title": "Fight Hustle, End Hurry",
+      "author": "John Mark Comer",
+      "format": "Podcast",
+      "topics": [
+        "glaube",
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Podcast gegen Hektik und Dauerstress: warum Eile dem geistlichen Leben schadet und wie ein langsameres Leben aussehen kann.",
+      "related": [
+        "the-ruthless-elimination-of-hurry"
+      ]
+    },
+    {
+      "id": "uplink",
+      "type": "podcast",
+      "title": "uplink",
+      "author": "c't",
+      "format": "Podcast",
+      "topics": [
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Der wöchentliche Technik-Podcast der c't-Redaktion."
+    },
+    {
+      "id": "heiseshow",
+      "type": "podcast",
+      "title": "#heiseshow",
+      "author": "heise online",
+      "format": "Podcast",
+      "topics": [
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Die wöchentliche Talkshow von heise online zu aktuellen IT-, Netz- und Tech-Themen."
+    },
+    {
+      "id": "ki-update",
+      "type": "podcast",
+      "title": "KI-Update",
+      "author": "heise online",
+      "format": "Podcast",
+      "topics": [
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Kurzes, regelmäßiges News-Update zu Entwicklungen rund um künstliche Intelligenz."
+    },
+    {
+      "id": "ct-4004",
+      "type": "podcast",
+      "title": "c't 4004",
+      "author": "c't",
+      "format": "Podcast",
+      "topics": [
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Der Podcast des c't-3003-Teams."
+    },
+    {
+      "id": "softwarearchitektour",
+      "type": "podcast",
+      "title": "SoftwareArchitekTOUR",
+      "author": "heise developer",
+      "format": "Podcast",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Podcast über Softwarearchitektur aus der Praxis für die Praxis.",
+      "related": [
+        "fundamentals-of-software-architecture"
+      ]
+    },
+    {
+      "id": "software-architektur-im-stream",
+      "type": "podcast",
+      "title": "Software-Architektur im Stream",
+      "author": "Eberhard Wolff",
+      "format": "Podcast",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Regelmäßige Folgen zu Softwarearchitektur mit Gästen aus der Praxis (software-architektur.tv).",
+      "related": [
+        "fundamentals-of-software-architecture"
+      ]
+    },
+    {
+      "id": "popcorn-culture",
+      "type": "podcast",
+      "title": "Popcorn Culture",
+      "author": "RefLab",
+      "format": "Podcast",
+      "topics": [
+        "glaube",
+        "roman"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "RefLab-Podcast über Popkultur, Filme und Serien."
+    },
+    {
+      "id": "ausgeglaubt",
+      "type": "podcast",
+      "title": "Ausgeglaubt",
+      "author": "RefLab",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "RefLab-Podcast über Glaubensfragen und kritische Punkte im christlichen Glauben."
+    },
+    {
+      "id": "mind-maps",
+      "type": "podcast",
+      "title": "Mind Maps",
+      "author": "RefLab",
+      "format": "Podcast",
+      "topics": [
+        "glaube",
+        "philosophie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "RefLab-Podcast mit Gesprächen über Ideen, Denkwege und große Fragen."
+    },
+    {
+      "id": "unter-freiem-himmel",
+      "type": "podcast",
+      "title": "Unter freiem Himmel",
+      "author": "RefLab",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "RefLab-Podcast über Glauben und Leben."
+    },
+    {
+      "id": "sex-gott",
+      "type": "podcast",
+      "title": "Sex & Gott",
+      "author": "RefLab",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "RefLab-Podcast, der Mythen rund um Sexualität und Glauben aufklärt."
+    },
+    {
+      "id": "christlicher-glaube-reflab",
+      "type": "podcast",
+      "title": "Christlicher Glaube",
+      "author": "RefLab",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "RefLab-Podcast zu Grundfragen des christlichen Glaubens."
+    },
+    {
+      "id": "echo-der-zeit",
+      "type": "podcast",
+      "title": "Echo der Zeit",
+      "author": "SRF News",
+      "format": "Podcast",
+      "topics": [
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Das Abendmagazin von Radio SRF mit Hintergründen zu Politik und Weltgeschehen."
+    },
+    {
+      "id": "einfach-politik",
+      "type": "podcast",
+      "title": "Einfach Politik",
+      "author": "SRF News",
+      "format": "Podcast",
+      "topics": [
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Politische Themen, einfach und verständlich erklärt."
+    },
+    {
+      "id": "100-sekunden-wissen",
+      "type": "podcast",
+      "title": "100 Sekunden Wissen",
+      "author": "SRF Kultur",
+      "format": "Podcast",
+      "topics": [
+        "wissenschaft"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Jeden Tag ein Begriff, in rund 100 Sekunden erklärt."
+    },
+    {
+      "id": "srf-wissen",
+      "type": "podcast",
+      "title": "SRF Wissen",
+      "author": "SRF",
+      "format": "Podcast",
+      "topics": [
+        "wissenschaft"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Wissenschaftsthemen von Radio SRF."
+    },
+    {
+      "id": "sternstunde-philosophie",
+      "type": "podcast",
+      "title": "Sternstunde Philosophie",
+      "author": "SRF Kultur",
+      "format": "Podcast",
+      "topics": [
+        "philosophie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Gespräche mit Philosoph:innen und Denker:innen über die großen Fragen der Gegenwart.",
+      "related": [
+        "meditations"
+      ]
+    },
+    {
+      "id": "hossa-talk",
+      "type": "podcast",
+      "title": "Hossa Talk",
+      "author": "Gofi Müller, Jay Friedrichs",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Gespräche über Glauben, Gott und die Welt – offen, persönlich und mit Humor."
+    },
+    {
+      "id": "icf-muenchen",
+      "type": "podcast",
+      "title": "ICF München",
+      "author": "ICF München",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Predigten und Talks der ICF-Kirche München."
+    },
+    {
+      "id": "die-bibel-im-ohr",
+      "type": "podcast",
+      "title": "Die Bibel im Ohr!",
+      "author": "bibletunes.de",
+      "format": "Podcast",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Bibel-Podcast von bibletunes.de.",
+      "related": [
+        "die-bibel-gelesen-von-rufus-beck"
+      ]
+    },
+    {
+      "id": "psychohygiene",
+      "type": "podcast",
+      "title": "Psychohygiene",
+      "author": "ERF",
+      "format": "Podcast",
+      "topics": [
+        "psychologie",
+        "gesundheit",
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "ERF-Podcast über seelische Gesundheit."
+    },
+    {
+      "id": "srf-kids-hoerspiele",
+      "type": "podcast",
+      "title": "Hörspiele",
+      "author": "SRF Kids",
+      "format": "Podcast",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Hörspiele für Kinder von SRF Kids."
+    },
+    {
+      "id": "zum-glueck-ist-freitag",
+      "type": "podcast",
+      "title": "Zum Glück ist Freitag",
+      "author": "SRF",
+      "format": "Podcast",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Unterhaltsamer SRF-Podcast für Kinder."
+    },
+    {
+      "id": "srf-kinder-news",
+      "type": "podcast",
+      "title": "Kinder News",
+      "author": "SRF",
+      "format": "Podcast",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Pocket Casts",
+      "summary": "Nachrichten für Kinder, verständlich erklärt."
+    }
+  ],
+  "lists": [
+    {
+      "id": "thomas",
+      "label": "Empfohlen von Thomas Härry",
+      "short": "Tipp von Thomas Härry"
+    },
+    {
+      "id": "michi",
+      "label": "Von Michi gehört",
+      "short": "Von Michi gehört"
     }
   ]
 }

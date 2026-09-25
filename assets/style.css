@@ -56,6 +56,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -304,6 +305,14 @@ select {
   font-size: .78rem; font-weight: 700;
 }
 .type-pill svg { width: 14px; height: 14px; }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.list-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border);
+  font-size: .78rem; font-weight: 700;
+}
+.list-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: hsl(var(--h) 65% 55%); }
+.book__kind { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .page h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.08; letter-spacing: -.03em; font-weight: 800; margin: 14px 0 6px; text-wrap: balance; }
 .page__subtitle { margin: 0 0 8px; color: var(--muted); font-size: 1.05rem; font-weight: 500; }
 .page__author { margin: 0 0 18px; }
@@ -325,6 +334,7 @@ select {
 .page__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 
 .page__body { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; margin-top: 24px; }
+.page__body > :only-child { grid-column: 1 / -1; }
 .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 28px; }
 .panel h2 { font-size: 1.05rem; font-weight: 800; margin: 0 0 12px; }
 .panel p { margin: 0; font-size: 1.02rem; line-height: 1.7; max-width: 65ch; }
