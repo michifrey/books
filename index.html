@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=__VERSION__">
 </head>
 <body>
   <div class="app">
     <aside class="sidebar">
       <a class="brand" href="#">
         <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M5 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H5zM19 4h-3v14h3z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H5zM19 4h-3v14h3z"/></svg>
         </span>
         Leseliste
       </a>
@@ -30,12 +30,12 @@
     <div class="main">
       <header class="topbar">
         <label class="search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
           <input id="search" type="search" placeholder="Titel, Autor:in oder Stichwort suchen" autocomplete="off">
           <kbd>/</kbd>
         </label>
         <button class="icon-btn" data-theme-toggle type="button" aria-label="Farbschema wechseln">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
         </button>
       </header>
 
@@ -66,7 +66,7 @@
 
       <div id="detail-view" hidden>
         <a class="back" id="back" href="#">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
           Zurück zur Übersicht
         </a>
         <article class="page" id="page"></article>
@@ -80,6 +80,6 @@
     <aside class="rail" id="rail" aria-label="Bestenliste"></aside>
   </div>
 
-  <script src="assets/app.js" type="module"></script>
+  <script src="assets/app.js?v=__VERSION__" type="module"></script>
 </body>
 </html>
