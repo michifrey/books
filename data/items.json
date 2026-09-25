@@ -55,6 +55,14 @@
     {
       "id": "sagen",
       "label": "Mythen & Sagen"
+    },
+    {
+      "id": "musik",
+      "label": "Musik"
+    },
+    {
+      "id": "freizeit",
+      "label": "Unterhaltung & Freizeit"
     }
   ],
   "types": [
@@ -3564,6 +3572,428 @@
       ],
       "platform": "Pocket Casts",
       "summary": "Nachrichten für Kinder, verständlich erklärt."
+    },
+    {
+      "id": "yt-matt-pocock",
+      "type": "video",
+      "title": "Matt Pocock",
+      "author": "Matt Pocock",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "TypeScript-Lehrer (Total TypeScript) mit kurzen, präzisen Videos zu fortgeschrittenem TypeScript und KI-gestützter Entwicklung."
+    },
+    {
+      "id": "yt-christian-lempa",
+      "type": "video",
+      "title": "Christian Lempa",
+      "author": "Christian Lempa",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "technologie",
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Tutorials zu Homelab, Self-Hosting, DevOps, Netzwerken und IT-Sicherheit."
+    },
+    {
+      "id": "yt-alex-ziskind",
+      "type": "video",
+      "title": "Alex Ziskind",
+      "author": "Alex Ziskind",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "technologie",
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Ein Entwickler testet Laptops, Macs und Hardware aus Sicht von Programmierer:innen – inklusive lokaler KI-Modelle."
+    },
+    {
+      "id": "yt-ibm-technology",
+      "type": "video",
+      "title": "IBM Technology",
+      "author": "IBM",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Verständliche Erklärvideos zu KI, Cloud, Daten und IT-Sicherheit – oft am Whiteboard."
+    },
+    {
+      "id": "yt-ai-engineer",
+      "type": "video",
+      "title": "AI Engineer",
+      "author": "AI Engineer",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "software",
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Vorträge der AI-Engineer-Konferenzen rund um den Bau von Anwendungen mit KI-Modellen."
+    },
+    {
+      "id": "yt-microsoft-mechanics",
+      "type": "video",
+      "title": "Microsoft Mechanics",
+      "author": "Microsoft",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Offizieller Microsoft-Kanal mit technischen Demos zu Microsoft 365, Azure und Windows."
+    },
+    {
+      "id": "yt-bytebytego",
+      "type": "video",
+      "title": "ByteByteGo",
+      "author": "Alex Xu",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "System Design anschaulich erklärt: Architekturen großer Systeme, Protokolle und Interview-Wissen mit klaren Animationen.",
+      "related": [
+        "fundamentals-of-software-architecture"
+      ]
+    },
+    {
+      "id": "yt-designcourse",
+      "type": "video",
+      "title": "DesignCourse",
+      "author": "Gary Simon",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Tutorials zu UI/UX- und Webdesign sowie Frontend-Entwicklung."
+    },
+    {
+      "id": "yt-dfinity",
+      "type": "video",
+      "title": "DFINITY Foundation",
+      "author": "DFINITY Foundation",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Kanal der DFINITY Foundation rund um die Blockchain „Internet Computer“."
+    },
+    {
+      "id": "yt-gtd",
+      "type": "video",
+      "title": "GTD",
+      "author": "Getting Things Done",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Videos rund um „Getting Things Done“, die Selbstmanagement-Methode von David Allen.",
+      "related": [
+        "deep-work"
+      ]
+    },
+    {
+      "id": "yt-icf-zurich-english",
+      "type": "video",
+      "title": "ICF Zurich – English",
+      "author": "ICF Zürich",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Englischsprachige Gottesdienste und Predigten der ICF-Kirche Zürich.",
+      "related": [
+        "icf-muenchen"
+      ]
+    },
+    {
+      "id": "yt-passion-music",
+      "type": "video",
+      "title": "Passion Music",
+      "author": "Passion",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "musik",
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Worship-Musik der Passion-Bewegung, oft live von den Passion-Konferenzen."
+    },
+    {
+      "id": "yt-sunday-sounds",
+      "type": "video",
+      "title": "Sunday Sounds",
+      "author": "Sunday Sounds",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "musik"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Musik-Kanal."
+    },
+    {
+      "id": "yt-walk-off-the-earth",
+      "type": "video",
+      "title": "Walk off the Earth",
+      "author": "Walk off the Earth",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "musik"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Kanadische Band, bekannt für kreative Cover-Versionen – etwa fünf Leute an einer Gitarre."
+    },
+    {
+      "id": "yt-pianote",
+      "type": "video",
+      "title": "Pianote",
+      "author": "Pianote",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "musik"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Klavierunterricht für Einsteiger:innen und Fortgeschrittene: Technik, Akkorde, Songs und Übungstipps."
+    },
+    {
+      "id": "yt-native-instruments",
+      "type": "video",
+      "title": "Native Instruments",
+      "author": "Native Instruments",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "musik"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Kanal des Musiksoftware- und Hardware-Herstellers mit Tutorials und Demos zur Musikproduktion."
+    },
+    {
+      "id": "yt-jacob-collier",
+      "type": "video",
+      "title": "Jacob Collier",
+      "author": "Jacob Collier",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "musik"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Der Multiinstrumentalist zeigt Musik, Arrangements und seine Liebe zu Harmonien."
+    },
+    {
+      "id": "yt-peter-james-productions",
+      "type": "video",
+      "title": "Peter James Productions",
+      "author": "Peter James Productions",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "musik"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "YouTube-Kanal."
+    },
+    {
+      "id": "yt-srf-kids",
+      "type": "video",
+      "title": "SRF Kids",
+      "author": "SRF",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "kinder"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Der Kinderkanal von SRF mit Wissen, Nachrichten und Unterhaltung für Kinder.",
+      "related": [
+        "srf-kinder-news"
+      ]
+    },
+    {
+      "id": "yt-tonight-show",
+      "type": "video",
+      "title": "The Tonight Show Starring Jimmy Fallon",
+      "author": "NBC",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "freizeit"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Late-Night-Show mit Jimmy Fallon: Interviews, Spiele und Musik-Auftritte."
+    },
+    {
+      "id": "yt-chris-tall",
+      "type": "video",
+      "title": "Chris Tall",
+      "author": "Chris Tall",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "freizeit"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Der Comedian Chris Tall mit Stand-up und Sketchen."
+    },
+    {
+      "id": "yt-the-real-life-guys",
+      "type": "video",
+      "title": "The Real Life Guys",
+      "author": "The Real Life Guys",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "freizeit",
+        "technologie"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Zwei Brüder bauen verrückte DIY-Projekte – vom selbstgebauten U-Boot bis zu fliegenden Konstruktionen."
+    },
+    {
+      "id": "yt-amaury-guichon",
+      "type": "video",
+      "title": "Amaury Guichon",
+      "author": "Amaury Guichon",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "freizeit"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Der Patissier erschafft spektakuläre Skulpturen aus Schokolade."
+    },
+    {
+      "id": "yt-jose-elcook",
+      "type": "video",
+      "title": "Jose.elcook",
+      "author": "Jose.elcook",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "freizeit"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "Kurze Koch- und Rezeptvideos."
+    },
+    {
+      "id": "yt-nathheimberg",
+      "type": "video",
+      "title": "NathHeimberg",
+      "author": "NathHeimberg",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "freizeit"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "YouTube-Kanal."
+    },
+    {
+      "id": "yt-abel-mendoza",
+      "type": "video",
+      "title": "Abel Mendoza",
+      "author": "Abel Mendoza",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "freizeit"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "YouTube-Kanal."
+    },
+    {
+      "id": "yt-bergauer-ag",
+      "type": "video",
+      "title": "Bergauer AG",
+      "author": "Bergauer AG",
+      "format": "YouTube-Kanal",
+      "topics": [
+        "freizeit"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "YouTube",
+      "summary": "YouTube-Kanal der Bergauer AG."
     }
   ],
   "lists": [
