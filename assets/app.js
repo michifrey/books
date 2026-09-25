@@ -38,6 +38,7 @@ const ICON_PATHS = {
   podcast: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/>',
   video: '<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/>',
   article: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+  website: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
   star: '<path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/>',
   check: '<path d="M20 6 9 17l-5-5"/>',
   arrow: '<path d="M7 17 17 7M9 7h8v8"/>',
@@ -57,6 +58,7 @@ const TYPE_TEXT = {
   podcast: { one: "Podcast", cta: "Podcast finden", by: "mit" },
   video: { one: "Video", cta: "Video ansehen", by: "von" },
   article: { one: "Artikel", cta: "Artikel lesen", by: "von" },
+  website: { one: "Webseite", cta: "Webseite öffnen", by: "von" },
 };
 const typeOne = (id) => TYPE_TEXT[id]?.one ?? "";
 
@@ -188,18 +190,73 @@ const ofType = (item) =>
   (state.type === "all" || item.type === state.type) &&
   (state.list === "all" || item.lists?.includes(state.list));
 
+// Words that should find each other, across German and English.
+const SYNONYMS = [
+  ["kirche", "church", "gemeinde", "gottesdienst", "predigt", "icf"],
+  ["gott", "god", "jesus"],
+  ["glaube", "faith", "christlich", "christian faith"],
+  ["bibel", "bible", "testament", "evangelium", "gospel"],
+  ["gebet", "prayer", "beten"],
+  ["fuhrung", "leadership", "selbstfuhrung", "fuhren"],
+  ["gewohnheit", "habit", "routine"],
+  ["architektur", "architecture", "microservice", "system design"],
+  ["programmieren", "code", "coding", "software", "entwickl", "developer"],
+  ["kinder", "kids", "children", "kind"],
+  ["musik", "music", "song", "klavier", "piano", "worship"],
+  ["kochen", "cooking", "cook", "rezept", "patissier", "schokolade"],
+  ["drache", "dragon"],
+  ["zwerg", "dwarf"],
+  ["geschichte", "history", "historisch"],
+  ["gesundheit", "health", "schlaf", "sleep"],
+  ["geld", "money", "finanz", "invest"],
+  ["ki", "ai", "kunstliche intelligenz", "artificial intelligence"],
+];
+const synonymIndex = new Map();
+SYNONYMS.forEach((group) => group.forEach((w) => synonymIndex.set(w, group)));
+
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const reCache = new Map();
+// Short words must match a whole word ("ki" must not hit "Kinder"); longer ones match at a word start.
+function wordRe(w) {
+  if (!reCache.has(w)) {
+    const body = escapeRe(w);
+    reCache.set(w, new RegExp(w.length <= 3 ? `(^|[^a-z0-9])${body}($|[^a-z0-9])` : `(^|[^a-z0-9])${body}`));
+  }
+  return reCache.get(w);
+}
+
+// A query word matches if it, or a word it is a synonym of, appears in the text.
+function expand(word) {
+  const alts = new Set([word]);
+  for (const [key, group] of synonymIndex) {
+    if (word === key || (word.length >= 4 && key.startsWith(word)) || (key.length >= 4 && word.startsWith(key))) {
+      group.forEach((g) => alts.add(g));
+    }
+  }
+  return [...alts];
+}
+
+function haystack(item) {
+  return (item._hay ??= normalize(
+    [item.title, item.subtitle, item.author, item.summary, item.source, item.format, item.series, item.platform,
+      ...(item.takeaways || []), ...item.topics.map(topicLabel), typeById.get(item.type)?.label].join(" ")
+  ));
+}
+
+function matchesQuery(item) {
+  if (!state.query) return true;
+  const hay = haystack(item);
+  return normalize(state.query).split(/\s+/).filter(Boolean)
+    .every((w) => w.length === 1 ? hay.includes(w) : expand(w).some((alt) => wordRe(alt).test(hay)));
+}
+
 function matches(item) {
   if (!ofType(item)) return false;
   if (state.topics.size && !item.topics.some((t) => state.topics.has(t))) return false;
-  if (state.query) {
-    const hay = normalize(
-      [item.title, item.subtitle, item.author, item.summary, item.source, item.format, item.series, item.platform,
-        ...(item.takeaways || []), ...item.topics.map(topicLabel), typeById.get(item.type)?.label].join(" ")
-    );
-    return normalize(state.query).split(/\s+/).every((w) => hay.includes(w));
-  }
-  return true;
+  return matchesQuery(item);
 }
+
+const filtersActive = () => state.list !== "all" || state.type !== "all" || state.topics.size > 0;
 
 // Keeps series volumes together and in reading order.
 const bySeries = (a, b) =>
@@ -349,8 +406,17 @@ function renderResults() {
   $("#list-title").textContent = listTitle();
   $("#count").textContent = `${list.length} ${list.length === 1 ? "Empfehlung" : "Empfehlungen"}`;
 
+  // A search inside a filtered view should not hide matches elsewhere.
+  const everywhere = state.query && filtersActive() ? data.items.filter(matchesQuery).length : 0;
+  const hint = everywhere > list.length
+    ? `<div class="notice">
+        <span>${list.length ? `Nur ${list.length} von ${everywhere} Treffern` : `Keine Treffer`} in der aktuellen Auswahl.</span>
+        <button type="button" class="btn btn--primary" data-action="search-all">Alle ${everywhere} Treffer anzeigen</button>
+      </div>`
+    : "";
+
   if (!list.length) {
-    $("#results").innerHTML = `<div class="empty">
+    $("#results").innerHTML = hint || `<div class="empty">
       <p>Keine Treffer für diese Auswahl.</p>
       <button type="button" class="btn" data-action="reset">Filter zurücksetzen</button>
     </div>`;
@@ -359,7 +425,7 @@ function renderResults() {
 
   // Shelves only make sense while browsing broadly; a single topic or a search shows a grid.
   if (state.view === "grid" || state.topics.size === 1 || state.query) {
-    $("#results").innerHTML = `<div class="grid">${list.map(card).join("")}</div>`;
+    $("#results").innerHTML = `${hint}<div class="grid">${list.map(card).join("")}</div>`;
   } else {
     $("#results").innerHTML = data.topics
       .filter((t) => !state.topics.size || state.topics.has(t.id))
@@ -559,6 +625,13 @@ function bind() {
       state.topics = new Set([show.dataset.showTopic]);
       renderList();
       window.scrollTo({ top: $(".toolbar").offsetTop - 16, behavior: "smooth" });
+      return;
+    }
+    if (e.target.closest("[data-action=search-all]")) {
+      state.list = "all";
+      state.type = "all";
+      state.topics.clear();
+      renderList();
       return;
     }
     if (!e.target.closest("[data-action=reset]")) return;

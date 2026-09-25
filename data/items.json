@@ -100,6 +100,11 @@
       "label": "Artikel",
       "status": "live",
       "icon": "📰"
+    },
+    {
+      "id": "website",
+      "label": "Webseiten",
+      "status": "live"
     }
   ],
   "items": [
@@ -3994,6 +3999,40 @@
       ],
       "platform": "YouTube",
       "summary": "YouTube-Kanal der Bergauer AG."
+    },
+    {
+      "id": "medium",
+      "type": "website",
+      "title": "Medium",
+      "author": "Medium",
+      "format": "Portal",
+      "source": "medium.com",
+      "topics": [
+        "technologie",
+        "software",
+        "gewohnheiten"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "link": "https://medium.com",
+      "summary": "Plattform für Artikel und Essays von Autor:innen aus aller Welt – besonders stark zu Softwareentwicklung, Design, Produktivität und persönlicher Entwicklung."
+    },
+    {
+      "id": "biblemap",
+      "type": "website",
+      "title": "BibleMap",
+      "author": "biblemap.ch",
+      "format": "Webseite",
+      "source": "biblemap.ch",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "link": "https://www.biblemap.ch/",
+      "summary": "Schweizer Webseite rund um die Bibel."
     }
   ],
   "lists": [

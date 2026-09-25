@@ -45,7 +45,7 @@ Weitere optionale Felder:
 - `platform` – z. B. `"Google Play Books"` (der Button verlinkt dann auf die Google-Play-Suche) oder `"Pocket Casts"`.
 - `rating` ist optional. Einträge ohne Bewertung zeigen keine Sterne.
 
-Für Nicht-Bücher gibt es zusätzlich `duration` (Minuten), `format` (z. B. „TED Talk“, „YouTube-Kanal“) und `source` (z. B. „Wait But Why“). `type` ist einer von `book`, `audiobook`, `podcast`, `video`, `article`.
+Für Nicht-Bücher gibt es zusätzlich `duration` (Minuten), `format` (z. B. „TED Talk“, „YouTube-Kanal“) und `source` (z. B. „Wait But Why“). `type` ist einer von `book`, `audiobook`, `podcast`, `video`, `article`, `website`.
 
 - `related` verknüpft Einträge – die Verknüpfung wirkt in beide Richtungen.
 - `coverSearch` hilft bei deutschen Titeln: gesucht wird nach dem Originaltitel.
