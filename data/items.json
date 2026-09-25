@@ -3999,8 +3999,11 @@
   "lists": [
     {
       "id": "thomas",
-      "label": "Empfohlen von Thomas Härry",
-      "short": "Tipp von Thomas Härry"
+      "label": "Härrys Best Reads",
+      "short": "Härrys Best Read",
+      "intro": "Empfehlungen von Thomas Härry: Bücher, Hörbücher, Podcasts, Videos und Artikel, die er weiterempfiehlt.",
+      "url": "https://tdsaarau.ch/themen/thomas-haerry",
+      "urlLabel": "Mehr über Thomas Härry beim TDS Aarau"
     },
     {
       "id": "michi",
