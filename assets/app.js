@@ -1,7 +1,7 @@
 const $ = (sel) => document.querySelector(sel);
 
 const state = {
-  type: "book",
+  type: "all",
   topics: new Set(),
   query: "",
   sort: "rating",
@@ -10,6 +10,10 @@ const state = {
 
 let data = { topics: [], types: [], items: [] };
 const topicById = new Map();
+const typeById = new Map();
+const itemById = new Map();
+let listHash = "";
+let listScroll = 0;
 
 const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -23,37 +27,130 @@ const yearLabel = (y) => (y < 1000 ? `ca. ${y} n. Chr.` : y);
 
 const normalize = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 
-/* ---------- URL state (filters are shareable via the hash) ---------- */
+const topicLabel = (id) => topicById.get(id)?.label ?? id;
+
+const TYPE_TEXT = {
+  book: { cta: "Buch ansehen", by: "von" },
+  audiobook: { cta: "Hörbuch finden", by: "von" },
+  podcast: { cta: "Podcast finden", by: "mit" },
+  video: { cta: "Video ansehen", by: "von" },
+  article: { cta: "Artikel lesen", by: "von" },
+};
+
+function itemLink(item) {
+  if (item.link) return item.link;
+  const q = encodeURIComponent(`${item.title} ${item.author}`);
+  switch (item.type) {
+    case "book": return `https://openlibrary.org/search?q=${q}`;
+    case "video": return `https://www.youtube.com/results?search_query=${q}`;
+    default: return `https://duckduckgo.com/?q=${q}`;
+  }
+}
+
+function metaFacts(item) {
+  const facts = [];
+  if (item.year) facts.push(["Jahr", yearLabel(item.year)]);
+  if (item.pages) facts.push(["Umfang", `${item.pages} Seiten`]);
+  if (item.duration) facts.push([item.type === "article" ? "Lesezeit" : "Dauer", `${item.duration} Min.`]);
+  if (item.format) facts.push(["Format", item.format]);
+  if (item.source) facts.push(["Quelle", item.source]);
+  return facts;
+}
+
+/* ---------- Real covers via Open Library (fetched in the visitor's browser, cached) ---------- */
+
+const coverCache = new Map();
+const COVER_TYPES = new Set(["book", "audiobook"]);
+
+function coverUrl(item) {
+  if (item.cover) return Promise.resolve(item.cover);
+  if (!COVER_TYPES.has(item.type)) return Promise.resolve(null);
+  if (coverCache.has(item.id)) return coverCache.get(item.id);
+
+  const key = `cover:v1:${item.id}`;
+  const p = (async () => {
+    try {
+      const hit = localStorage.getItem(key);
+      if (hit !== null) return hit || null;
+    } catch {}
+    const q = item.coverSearch ?? { title: item.title, author: item.author.split(",")[0] };
+    const params = new URLSearchParams({ title: q.title, author: q.author, limit: "5", fields: "cover_i" });
+    try {
+      const res = await fetch(`https://openlibrary.org/search.json?${params}`);
+      const json = await res.json();
+      const id = json.docs?.find((d) => d.cover_i)?.cover_i;
+      const url = id ? `https://covers.openlibrary.org/b/id/${id}-L.jpg` : "";
+      try { localStorage.setItem(key, url); } catch {}
+      return url || null;
+    } catch {
+      return null; // offline or blocked: keep the generated cover
+    }
+  })();
+  coverCache.set(item.id, p);
+  return p;
+}
+
+const coverObserver = "IntersectionObserver" in window
+  ? new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        coverObserver.unobserve(e.target);
+        hydrateCover(e.target);
+      });
+    }, { rootMargin: "300px" })
+  : null;
+
+async function hydrateCover(el) {
+  const item = itemById.get(el.dataset.coverId);
+  const url = item && (await coverUrl(item));
+  if (!url || el.querySelector("img")) return;
+  const img = new Image();
+  img.alt = `Cover: ${item.title}`;
+  img.className = "cover__img";
+  img.decoding = "async";
+  img.onload = () => el.classList.add("has-img");
+  img.src = url;
+  el.append(img);
+}
+
+function hydrateCovers(root) {
+  root.querySelectorAll("[data-cover-id]").forEach((el) =>
+    coverObserver ? coverObserver.observe(el) : hydrateCover(el)
+  );
+}
+
+/* ---------- URL state ---------- */
+// "#/<id>" is a detail page; anything else is the list with its filters.
 
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
-  if (p.get("type")) state.type = p.get("type");
-  state.topics = new Set((p.get("t") || "").split(",").filter(Boolean));
+  state.type = typeById.has(p.get("type")) ? p.get("type") : "all";
+  state.topics = new Set((p.get("t") || "").split(",").filter((t) => topicById.has(t)));
   state.query = p.get("q") || "";
-  if (p.get("sort")) state.sort = p.get("sort");
-  if (p.get("view")) state.view = p.get("view");
+  state.sort = p.get("sort") || "rating";
+  state.view = p.get("view") || "topics";
 }
 
 function writeHash() {
   const p = new URLSearchParams();
-  if (state.type !== "book") p.set("type", state.type);
+  if (state.type !== "all") p.set("type", state.type);
   if (state.topics.size) p.set("t", [...state.topics].join(","));
   if (state.query) p.set("q", state.query);
   if (state.sort !== "rating") p.set("sort", state.sort);
   if (state.view !== "topics") p.set("view", state.view);
-  const hash = p.toString();
-  history.replaceState(null, "", hash ? `#${hash}` : location.pathname + location.search);
+  listHash = p.toString();
+  history.replaceState(null, "", listHash ? `#${listHash}` : location.pathname + location.search);
 }
 
 /* ---------- Filtering ---------- */
 
 function matches(item) {
-  if (item.type !== state.type) return false;
+  if (state.type !== "all" && item.type !== state.type) return false;
   if (state.topics.size && !item.topics.some((t) => state.topics.has(t))) return false;
   if (state.query) {
     const hay = normalize(
-      [item.title, item.subtitle, item.author, item.summary, ...(item.takeaways || []),
-        ...item.topics.map((t) => topicById.get(t)?.label)].join(" ")
+      [item.title, item.subtitle, item.author, item.summary, item.source, item.format,
+        ...(item.takeaways || []), ...item.topics.map(topicLabel), typeById.get(item.type)?.label].join(" ")
     );
     return normalize(state.query).split(/\s+/).every((w) => hay.includes(w));
   }
@@ -63,20 +160,20 @@ function matches(item) {
 const sorters = {
   rating: (a, b) => b.rating - a.rating || a.title.localeCompare(b.title, "de"),
   title: (a, b) => a.title.localeCompare(b.title, "de"),
-  "year-desc": (a, b) => b.year - a.year,
-  "year-asc": (a, b) => a.year - b.year,
+  "year-desc": (a, b) => (b.year ?? 0) - (a.year ?? 0),
+  "year-asc": (a, b) => (a.year ?? 0) - (b.year ?? 0),
 };
 
-/* ---------- Rendering ---------- */
+/* ---------- List rendering ---------- */
 
 function renderTypes() {
   $("#types").innerHTML = data.types
     .map((t) => {
-      const n = data.items.filter((i) => i.type === t.id).length;
+      const n = t.id === "all" ? data.items.length : data.items.filter((i) => i.type === t.id).length;
       const soon = t.status === "soon";
       return `<button type="button" role="tab" data-type="${t.id}"
         aria-selected="${state.type === t.id}" ${soon ? "disabled" : ""}>
-        ${esc(t.label)}
+        ${t.icon ? `<span aria-hidden="true">${t.icon}</span>` : ""}${esc(t.label)}
         <span class="badge ${soon ? "badge--soon" : ""}">${soon ? "bald" : n}</span>
       </button>`;
     })
@@ -84,7 +181,7 @@ function renderTypes() {
 }
 
 function renderTopics() {
-  const ofType = data.items.filter((i) => i.type === state.type);
+  const ofType = data.items.filter((i) => state.type === "all" || i.type === state.type);
   $("#topics").innerHTML = data.topics
     .map((t) => {
       const n = ofType.filter((i) => i.topics.includes(t.id)).length;
@@ -96,28 +193,32 @@ function renderTopics() {
     .join("");
 }
 
-function cover(item) {
-  return `<div class="cover" style="--h:${hue(item.id)}">
-    <div class="cover__title">${esc(item.title)}</div>
-    <div class="cover__author">${esc(item.author)}</div>
+function cover(item, variant = "") {
+  const type = typeById.get(item.type);
+  return `<div class="cover cover--${item.type} ${variant}" style="--h:${hue(item.id)}" data-cover-id="${item.id}">
+    <span class="cover__type">${type?.icon ?? ""} ${esc(type?.label ?? "")}</span>
+    <div class="cover__text">
+      <div class="cover__title">${esc(item.title)}</div>
+      <div class="cover__author">${esc(item.author)}</div>
+    </div>
   </div>`;
 }
 
 function card(item) {
-  return `<button type="button" class="card" data-id="${item.id}" aria-label="${esc(item.title)} – Details öffnen">
+  return `<a class="card" href="#/${item.id}">
     ${cover(item)}
     <div class="card__body">
       <span class="stars" aria-label="${item.rating} von 5">${stars(item.rating)}</span>
       <h3>${esc(item.title)}</h3>
-      <p class="meta">${esc(item.author)} · ${yearLabel(item.year)}</p>
+      <p class="meta">${esc(item.author)}${item.year ? ` · ${yearLabel(item.year)}` : ""}</p>
       <p class="summary">${esc(item.summary)}</p>
-      <div class="tags">${item.topics.map((t) => `<span class="tag">${esc(topicById.get(t)?.label ?? t)}</span>`).join("")}</div>
+      <div class="tags">${item.topics.map((t) => `<span class="tag">${esc(topicLabel(t))}</span>`).join("")}</div>
     </div>
-  </button>`;
+  </a>`;
 }
 
 function renderResults() {
-  const list = data.items.filter(matches).sort(sorters[state.sort]);
+  const list = data.items.filter(matches).sort(sorters[state.sort] ?? sorters.rating);
   $("#count").textContent = `${list.length} ${list.length === 1 ? "Empfehlung" : "Empfehlungen"}`;
 
   if (!list.length) {
@@ -130,24 +231,22 @@ function renderResults() {
 
   if (state.view === "grid") {
     $("#results").innerHTML = `<div class="grid">${list.map(card).join("")}</div>`;
-    return;
+  } else {
+    // Grouped by topic: an item appears under each of its (visible) topics.
+    $("#results").innerHTML = data.topics
+      .filter((t) => !state.topics.size || state.topics.has(t.id))
+      .map((t) => ({ topic: t, items: list.filter((i) => i.topics.includes(t.id)) }))
+      .filter((g) => g.items.length)
+      .map(({ topic, items }) => `<section class="section" id="thema-${topic.id}">
+        <h2>${topic.emoji} ${esc(topic.label)} <small>${items.length}</small></h2>
+        <div class="grid">${items.map(card).join("")}</div>
+      </section>`)
+      .join("");
   }
-
-  // Grouped by topic: an item appears under each of its (visible) topics.
-  const groups = data.topics
-    .filter((t) => !state.topics.size || state.topics.has(t.id))
-    .map((t) => ({ topic: t, items: list.filter((i) => i.topics.includes(t.id)) }))
-    .filter((g) => g.items.length);
-
-  $("#results").innerHTML = groups
-    .map(({ topic, items }) => `<section class="section" id="thema-${topic.id}">
-      <h2>${topic.emoji} ${esc(topic.label)} <small>${items.length}</small></h2>
-      <div class="grid">${items.map(card).join("")}</div>
-    </section>`)
-    .join("");
+  hydrateCovers($("#results"));
 }
 
-function render() {
+function renderList() {
   renderTypes();
   renderTopics();
   renderResults();
@@ -157,46 +256,111 @@ function render() {
   writeHash();
 }
 
-/* ---------- Detail dialog ---------- */
+/* ---------- Detail page ---------- */
 
-function openDetail(id) {
-  const item = data.items.find((i) => i.id === id);
-  if (!item) return;
-  const q = encodeURIComponent(`${item.title} ${item.author}`);
-  $("#detail-body").innerHTML = `
-    <button type="button" class="detail__close" data-action="close" aria-label="Schließen">✕</button>
-    ${cover(item)}
-    <div class="detail__content">
-      <h2 id="detail-title" hidden>${esc(item.title)}</h2>
-      <div class="detail__meta">
-        <span class="stars" aria-label="${item.rating} von 5">${stars(item.rating)}</span>
-        ${item.subtitle ? `<span>${esc(item.subtitle)}</span>` : ""}
-        <span>${yearLabel(item.year)}</span>
-        ${item.pages ? `<span>${item.pages} Seiten</span>` : ""}
+function relatedItems(item) {
+  // Explicit links in both directions.
+  const ids = new Set(item.related ?? []);
+  data.items.forEach((o) => o.related?.includes(item.id) && ids.add(o.id));
+  ids.delete(item.id);
+  return [...ids].map((id) => itemById.get(id)).filter(Boolean);
+}
+
+function sameTopicItems(item, exclude) {
+  return data.items
+    .filter((o) => o.id !== item.id && !exclude.has(o.id))
+    .map((o) => ({ o, overlap: o.topics.filter((t) => item.topics.includes(t)).length }))
+    .filter((x) => x.overlap)
+    .sort((a, b) => b.overlap - a.overlap || b.o.rating - a.o.rating)
+    .slice(0, 4)
+    .map((x) => x.o);
+}
+
+function renderDetail(item) {
+  const type = typeById.get(item.type);
+  const text = TYPE_TEXT[item.type] ?? TYPE_TEXT.book;
+  const related = relatedItems(item);
+  const more = sameTopicItems(item, new Set(related.map((r) => r.id)));
+
+  $("#page").innerHTML = `
+    <section class="page__hero">
+      <div class="page__cover">${cover(item, "cover--large")}</div>
+      <div class="page__intro">
+        <span class="pill">${type?.icon ?? ""} ${esc(type?.label ?? "")}</span>
+        <h1>${esc(item.title)}</h1>
+        ${item.subtitle ? `<p class="page__subtitle">${esc(item.subtitle)}</p>` : ""}
+        <p class="page__author">${text.by} <strong>${esc(item.author)}</strong></p>
+        <p class="stars stars--lg" aria-label="Bewertung: ${item.rating} von 5">${stars(item.rating)}</p>
+        <dl class="facts">
+          ${metaFacts(item).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}
+        </dl>
+        <div class="chips">${item.topics.map((t) =>
+          `<a class="chip" href="#t=${t}">${topicById.get(t)?.emoji ?? ""} ${esc(topicLabel(t))}</a>`).join("")}</div>
+        <div class="page__actions">
+          <a class="btn btn--primary" href="${esc(itemLink(item))}" target="_blank" rel="noopener">${text.cta} ↗</a>
+          <button type="button" class="btn" data-action="share">Link kopieren</button>
+        </div>
       </div>
-      <p>${esc(item.summary)}</p>
-      ${item.takeaways?.length ? `<h3>Kernaussagen</h3><ul>${item.takeaways.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
-      <h3>Themen</h3>
-      <div class="chips">${item.topics.map((t) => `<button type="button" class="chip" data-jump-topic="${t}">${topicById.get(t)?.emoji ?? ""} ${esc(topicById.get(t)?.label ?? t)}</button>`).join("")}</div>
-      <div class="detail__actions">
-        <a class="btn btn--primary" href="${item.link || `https://openlibrary.org/search?q=${q}`}" target="_blank" rel="noopener">Buch ansehen ↗</a>
-        <button type="button" class="btn" data-action="share">Link kopieren</button>
-      </div>
-    </div>`;
-  const dlg = $("#detail");
-  dlg.dataset.id = id;
-  if (!dlg.open) dlg.showModal();
+    </section>
+
+    <section class="page__section">
+      <h2>Worum geht's?</h2>
+      <p class="page__summary">${esc(item.summary)}</p>
+    </section>
+
+    ${item.takeaways?.length ? `<section class="page__section">
+      <h2>Kernaussagen</h2>
+      <ol class="takeaways">${item.takeaways.map((t) => `<li>${esc(t)}</li>`).join("")}</ol>
+    </section>` : ""}
+
+    ${related.length ? `<section class="page__section">
+      <h2>Passt dazu</h2>
+      <div class="grid">${related.map(card).join("")}</div>
+    </section>` : ""}
+
+    ${more.length ? `<section class="page__section">
+      <h2>Mehr zum Thema</h2>
+      <div class="grid">${more.map(card).join("")}</div>
+    </section>` : ""}`;
+
+  document.title = `${item.title} – Leseliste`;
+  $("#back").href = `#${listHash}`;
+  hydrateCovers($("#page"));
+}
+
+/* ---------- Routing ---------- */
+
+function route() {
+  const m = location.hash.match(/^#\/(.+)$/);
+  const item = m && itemById.get(decodeURIComponent(m[1]));
+  const detail = Boolean(item);
+
+  if (detail) {
+    if (!$("#list-view").hidden) listScroll = scrollY;
+    renderDetail(item);
+    window.scrollTo(0, 0);
+  } else {
+    const wasDetail = $("#list-view").hidden;
+    readHash();
+    renderList();
+    document.title = "Leseliste – Empfehlungen";
+    if (wasDetail) requestAnimationFrame(() => window.scrollTo(0, listScroll));
+  }
+  $("#list-view").hidden = detail;
+  $("#detail-view").hidden = !detail;
 }
 
 /* ---------- Events ---------- */
 
 function bind() {
+  window.addEventListener("hashchange", route);
+
   $("#types").addEventListener("click", (e) => {
     const b = e.target.closest("[data-type]");
     if (!b || b.disabled) return;
     state.type = b.dataset.type;
     state.topics.clear();
-    render();
+    renderList();
   });
 
   $("#topics").addEventListener("click", (e) => {
@@ -204,69 +368,57 @@ function bind() {
     if (!b) return;
     const id = b.dataset.topic;
     state.topics.has(id) ? state.topics.delete(id) : state.topics.add(id);
-    render();
+    renderList();
   });
 
   let t;
   $("#search").addEventListener("input", (e) => {
     clearTimeout(t);
-    t = setTimeout(() => { state.query = e.target.value.trim(); render(); }, 120);
+    t = setTimeout(() => { state.query = e.target.value.trim(); renderList(); }, 120);
   });
 
-  $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
+  $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; renderList(); });
 
   document.querySelectorAll("[data-view]").forEach((b) =>
-    b.addEventListener("click", () => { state.view = b.dataset.view; render(); })
+    b.addEventListener("click", () => { state.view = b.dataset.view; renderList(); })
   );
 
   $("#results").addEventListener("click", (e) => {
-    if (e.target.closest("[data-action=reset]")) {
-      Object.assign(state, { query: "" });
-      state.topics.clear();
-      render();
-      return;
-    }
-    const c = e.target.closest(".card");
-    if (c) openDetail(c.dataset.id);
+    if (!e.target.closest("[data-action=reset]")) return;
+    state.query = "";
+    state.topics.clear();
+    renderList();
   });
 
-  const dlg = $("#detail");
-  dlg.addEventListener("click", async (e) => {
-    if (e.target === dlg || e.target.closest("[data-action=close]")) return dlg.close();
-    const jump = e.target.closest("[data-jump-topic]");
-    if (jump) {
-      state.topics = new Set([jump.dataset.jumpTopic]);
-      dlg.close();
-      render();
-      window.scrollTo({ top: $("#types").offsetTop - 12, behavior: "smooth" });
-    }
+  $("#page").addEventListener("click", async (e) => {
     const share = e.target.closest("[data-action=share]");
-    if (share) {
-      const url = `${location.origin}${location.pathname}#book=${dlg.dataset.id}`;
-      try { await navigator.clipboard.writeText(url); share.textContent = "Kopiert ✓"; }
-      catch { share.textContent = url; }
-    }
+    if (!share) return;
+    try { await navigator.clipboard.writeText(location.href); share.textContent = "Kopiert ✓"; }
+    catch { share.textContent = location.href; }
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "/" && document.activeElement.tagName !== "INPUT" && !dlg.open) {
+    if (e.key === "/" && document.activeElement.tagName !== "INPUT" && !$("#list-view").hidden) {
       e.preventDefault();
       $("#search").focus();
     }
+    if (e.key === "Escape" && !$("#detail-view").hidden) location.hash = listHash;
   });
 
-  // Theme toggle: cycles system → dark → light. Remembered per browser.
+  // Theme toggle: switches away from the current scheme. Remembered per browser.
   const root = document.documentElement;
   const applyTheme = (v) => (v ? root.setAttribute("data-theme", v) : root.removeAttribute("data-theme"));
   try { applyTheme(localStorage.getItem("theme")); } catch {}
-  $("#theme-toggle").addEventListener("click", () => {
-    const isDark = root.dataset.theme
-      ? root.dataset.theme === "dark"
-      : matchMedia("(prefers-color-scheme: dark)").matches;
-    const next = isDark ? "light" : "dark";
-    applyTheme(next);
-    try { localStorage.setItem("theme", next); } catch {}
-  });
+  document.querySelectorAll("[data-theme-toggle]").forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const isDark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      const next = isDark ? "light" : "dark";
+      applyTheme(next);
+      try { localStorage.setItem("theme", next); } catch {}
+    })
+  );
 }
 
 async function init() {
@@ -279,12 +431,11 @@ async function init() {
     return;
   }
   data.topics.forEach((t) => topicById.set(t.id, t));
+  data.types.forEach((t) => typeById.set(t.id, t));
+  data.items.forEach((i) => itemById.set(i.id, i));
 
-  const deepLink = new URLSearchParams(location.hash.slice(1)).get("book");
-  if (!deepLink) readHash();
   bind();
-  render();
-  if (deepLink) openDetail(deepLink);
+  route();
 }
 
 init();

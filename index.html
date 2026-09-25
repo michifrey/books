@@ -12,14 +12,15 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <div id="list-view">
   <header class="hero">
     <div class="wrap hero__inner">
       <div class="hero__top">
         <span class="logo">📚 Leseliste</span>
-        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Farbschema wechseln">◐</button>
+        <button class="icon-btn" data-theme-toggle type="button" aria-label="Farbschema wechseln">◐</button>
       </div>
-      <h1>Bücher, die den Kopf <em>weiter</em> machen.</h1>
-      <p class="hero__lead">Persönliche Empfehlungen mit kurzer Zusammenfassung und den wichtigsten Gedanken – sortiert nach Themen.</p>
+      <h1>Was den Kopf <em>weiter</em> macht.</h1>
+      <p class="hero__lead">Persönliche Empfehlungen – Bücher, Hörbücher, Podcasts, Videos und Artikel – mit kurzer Zusammenfassung und den wichtigsten Gedanken, sortiert nach Themen.</p>
       <label class="search">
         <span aria-hidden="true">⌕</span>
         <input id="search" type="search" placeholder="Titel, Autor:in oder Stichwort suchen …" autocomplete="off">
@@ -52,14 +53,19 @@
 
     <div id="results"></div>
   </main>
+  </div>
+
+  <div id="detail-view" hidden>
+    <div class="wrap topbar">
+      <a class="back" id="back" href="#">← Alle Empfehlungen</a>
+      <button class="icon-btn" data-theme-toggle type="button" aria-label="Farbschema wechseln">◐</button>
+    </div>
+    <article class="wrap page" id="page"></article>
+  </div>
 
   <footer class="wrap footer">
-    <p>Demnächst: Hörbücher · Podcasts · YouTube · Artikel</p>
+    <p>📚 Leseliste · Cover über <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a>, sonst generiert</p>
   </footer>
-
-  <dialog id="detail" aria-labelledby="detail-title">
-    <div class="detail" id="detail-body"></div>
-  </dialog>
 
   <script src="assets/app.js" type="module"></script>
 </body>

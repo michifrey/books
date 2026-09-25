@@ -1,20 +1,82 @@
 {
   "topics": [
-    { "id": "gewohnheiten", "label": "Produktivität & Gewohnheiten", "emoji": "⚡" },
-    { "id": "psychologie", "label": "Psychologie & Denken", "emoji": "🧠" },
-    { "id": "business", "label": "Business & Geld", "emoji": "📈" },
-    { "id": "philosophie", "label": "Philosophie & Sinn", "emoji": "🏛️" },
-    { "id": "wissenschaft", "label": "Wissenschaft", "emoji": "🔬" },
-    { "id": "geschichte", "label": "Geschichte & Gesellschaft", "emoji": "🌍" },
-    { "id": "technologie", "label": "Technologie", "emoji": "💻" },
-    { "id": "gesundheit", "label": "Gesundheit", "emoji": "🌱" }
+    {
+      "id": "gewohnheiten",
+      "label": "Produktivität & Gewohnheiten",
+      "emoji": "⚡"
+    },
+    {
+      "id": "psychologie",
+      "label": "Psychologie & Denken",
+      "emoji": "🧠"
+    },
+    {
+      "id": "business",
+      "label": "Business & Geld",
+      "emoji": "📈"
+    },
+    {
+      "id": "philosophie",
+      "label": "Philosophie & Sinn",
+      "emoji": "🏛️"
+    },
+    {
+      "id": "wissenschaft",
+      "label": "Wissenschaft",
+      "emoji": "🔬"
+    },
+    {
+      "id": "geschichte",
+      "label": "Geschichte & Gesellschaft",
+      "emoji": "🌍"
+    },
+    {
+      "id": "technologie",
+      "label": "Technologie",
+      "emoji": "💻"
+    },
+    {
+      "id": "gesundheit",
+      "label": "Gesundheit",
+      "emoji": "🌱"
+    }
   ],
   "types": [
-    { "id": "book", "label": "Bücher", "status": "live" },
-    { "id": "audiobook", "label": "Hörbücher", "status": "soon" },
-    { "id": "podcast", "label": "Podcasts", "status": "soon" },
-    { "id": "video", "label": "YouTube", "status": "soon" },
-    { "id": "article", "label": "Artikel", "status": "soon" }
+    {
+      "id": "all",
+      "label": "Alle",
+      "status": "live"
+    },
+    {
+      "id": "book",
+      "label": "Bücher",
+      "status": "live",
+      "icon": "📖"
+    },
+    {
+      "id": "audiobook",
+      "label": "Hörbücher",
+      "status": "live",
+      "icon": "🎧"
+    },
+    {
+      "id": "podcast",
+      "label": "Podcasts",
+      "status": "live",
+      "icon": "🎙️"
+    },
+    {
+      "id": "video",
+      "label": "YouTube",
+      "status": "live",
+      "icon": "▶️"
+    },
+    {
+      "id": "article",
+      "label": "Artikel",
+      "status": "live",
+      "icon": "📰"
+    }
   ],
   "items": [
     {
@@ -25,13 +87,19 @@
       "author": "James Clear",
       "year": 2018,
       "pages": 320,
-      "topics": ["gewohnheiten", "psychologie"],
+      "topics": [
+        "gewohnheiten",
+        "psychologie"
+      ],
       "rating": 5,
       "summary": "Große Veränderungen entstehen aus winzigen, konsequent wiederholten Gewohnheiten. Clear zeigt, wie man gute Gewohnheiten offensichtlich, attraktiv, einfach und befriedigend macht – und schlechte umgekehrt.",
       "takeaways": [
         "Systeme schlagen Ziele: Fokus auf den Prozess, nicht das Ergebnis.",
         "Identitätsbasierte Gewohnheiten: „Ich bin jemand, der …“",
         "Umgebung gestalten statt auf Willenskraft zu setzen."
+      ],
+      "related": [
+        "tim-urban-procrastinator"
       ]
     },
     {
@@ -42,14 +110,25 @@
       "author": "Daniel Kahneman",
       "year": 2011,
       "pages": 624,
-      "topics": ["psychologie", "business"],
+      "topics": [
+        "psychologie",
+        "business"
+      ],
       "rating": 5,
       "summary": "Der Nobelpreisträger beschreibt zwei Denksysteme: das schnelle, intuitive System 1 und das langsame, analytische System 2 – und die systematischen Denkfehler, die aus ihrem Zusammenspiel entstehen.",
       "takeaways": [
         "Intuition ist schnell, aber anfällig für Verzerrungen (Anker, Verfügbarkeit).",
         "Verluste wiegen psychologisch etwa doppelt so schwer wie Gewinne.",
         "Wichtige Entscheidungen bewusst verlangsamen."
-      ]
+      ],
+      "related": [
+        "kunst-des-klaren-denkens",
+        "hidden-brain"
+      ],
+      "coverSearch": {
+        "title": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman"
+      }
     },
     {
       "id": "sapiens",
@@ -59,14 +138,25 @@
       "author": "Yuval Noah Harari",
       "year": 2011,
       "pages": 528,
-      "topics": ["geschichte", "wissenschaft"],
+      "topics": [
+        "geschichte",
+        "wissenschaft"
+      ],
       "rating": 4,
       "summary": "Ein Parforceritt durch 70.000 Jahre Menschheitsgeschichte: von der kognitiven über die landwirtschaftliche bis zur wissenschaftlichen Revolution. Kern der These: Unsere Stärke ist die Fähigkeit, an gemeinsame Fiktionen zu glauben.",
       "takeaways": [
         "Geld, Staaten und Religionen sind „geteilte Mythen“, die Kooperation ermöglichen.",
         "Die Agrarrevolution war für den Einzelnen nicht unbedingt ein Fortschritt.",
         "Fortschritt und Glück sind nicht dasselbe."
-      ]
+      ],
+      "related": [
+        "geschichten-aus-der-geschichte",
+        "guns-germs-steel"
+      ],
+      "coverSearch": {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari"
+      }
     },
     {
       "id": "deep-work",
@@ -76,13 +166,20 @@
       "author": "Cal Newport",
       "year": 2016,
       "pages": 304,
-      "topics": ["gewohnheiten", "technologie"],
+      "topics": [
+        "gewohnheiten",
+        "technologie"
+      ],
       "rating": 4,
       "summary": "Die Fähigkeit, sich ablenkungsfrei auf kognitiv anspruchsvolle Aufgaben zu konzentrieren, wird immer seltener – und immer wertvoller. Newport liefert Strategien, um tiefe Arbeit zur Routine zu machen.",
       "takeaways": [
         "Tiefe Arbeit gezielt im Kalender blocken.",
         "Langeweile aushalten lernen – nicht jede Pause mit dem Handy füllen.",
         "Flache Arbeit (Mails, Meetings) bewusst begrenzen."
+      ],
+      "related": [
+        "makers-schedule",
+        "stolen-focus"
       ]
     },
     {
@@ -93,14 +190,23 @@
       "author": "Marc Aurel",
       "year": 180,
       "pages": 224,
-      "topics": ["philosophie"],
+      "topics": [
+        "philosophie"
+      ],
       "rating": 5,
       "summary": "Die privaten Notizen eines römischen Kaisers, nie zur Veröffentlichung gedacht. Ein zeitloser Leitfaden der Stoa: Gelassenheit gegenüber dem Unkontrollierbaren, Pflichtbewusstsein und Demut.",
       "takeaways": [
         "Unterscheide zwischen dem, was in deiner Macht steht, und dem, was nicht.",
         "Nicht die Dinge beunruhigen uns, sondern unsere Urteile über sie.",
         "Lebe jeden Tag, als wäre er ein vollständiges Leben."
-      ]
+      ],
+      "related": [
+        "four-thousand-weeks"
+      ],
+      "coverSearch": {
+        "title": "Meditations",
+        "author": "Marcus Aurelius"
+      }
     },
     {
       "id": "psychology-of-money",
@@ -110,14 +216,24 @@
       "author": "Morgan Housel",
       "year": 2020,
       "pages": 256,
-      "topics": ["business", "psychologie"],
+      "topics": [
+        "business",
+        "psychologie"
+      ],
       "rating": 5,
       "summary": "Erfolg mit Geld hat weniger mit Intelligenz zu tun als mit Verhalten. In 19 kurzen Geschichten zeigt Housel, wie Emotionen, Herkunft und Geduld unsere finanziellen Entscheidungen prägen.",
       "takeaways": [
         "Zinseszins braucht vor allem Zeit – und Durchhaltevermögen.",
         "Reichtum ist das, was man nicht sieht: nicht ausgegebenes Geld.",
         "„Genug“ zu definieren schützt vor unnötigem Risiko."
-      ]
+      ],
+      "related": [
+        "almanack-naval"
+      ],
+      "coverSearch": {
+        "title": "The Psychology of Money",
+        "author": "Morgan Housel"
+      }
     },
     {
       "id": "mans-search-for-meaning",
@@ -127,14 +243,22 @@
       "author": "Viktor E. Frankl",
       "year": 1946,
       "pages": 192,
-      "topics": ["philosophie", "psychologie", "geschichte"],
+      "topics": [
+        "philosophie",
+        "psychologie",
+        "geschichte"
+      ],
       "rating": 5,
       "summary": "Frankl verarbeitet seine Erfahrungen in Auschwitz und anderen Lagern und entwickelt daraus die Logotherapie: Der Mensch kann selbst unter extremsten Umständen einen Sinn finden – und das hält ihn am Leben.",
       "takeaways": [
         "Die letzte Freiheit: die Wahl der eigenen Haltung.",
         "Wer ein Warum zu leben hat, erträgt fast jedes Wie.",
         "Sinn entsteht durch Werk, Liebe und Haltung im Leid."
-      ]
+      ],
+      "coverSearch": {
+        "title": "Man's Search for Meaning",
+        "author": "Viktor Frankl"
+      }
     },
     {
       "id": "why-we-sleep",
@@ -144,14 +268,24 @@
       "author": "Matthew Walker",
       "year": 2017,
       "pages": 464,
-      "topics": ["gesundheit", "wissenschaft"],
+      "topics": [
+        "gesundheit",
+        "wissenschaft"
+      ],
       "rating": 4,
       "summary": "Der Neurowissenschaftler erklärt, warum Schlaf die Grundlage für Gedächtnis, Immunsystem und emotionale Stabilität ist – und welche Folgen chronischer Schlafmangel hat.",
       "takeaways": [
         "Regelmäßige Schlafenszeiten sind wichtiger als Ausschlafen am Wochenende.",
         "Koffein und Alkohol stören den Schlaf stärker als gedacht.",
         "Schlaf festigt Gelerntes – Lernen braucht Nächte."
-      ]
+      ],
+      "related": [
+        "huberman-lab"
+      ],
+      "coverSearch": {
+        "title": "Why We Sleep",
+        "author": "Matthew Walker"
+      }
     },
     {
       "id": "lean-startup",
@@ -161,13 +295,19 @@
       "author": "Eric Ries",
       "year": 2011,
       "pages": 336,
-      "topics": ["business", "technologie"],
+      "topics": [
+        "business",
+        "technologie"
+      ],
       "rating": 4,
       "summary": "Startups sind Experimente unter extremer Unsicherheit. Ries überträgt Prinzipien des Lean Manufacturing auf Gründungen: bauen, messen, lernen – in möglichst kurzen Zyklen.",
       "takeaways": [
         "Minimum Viable Product: so früh wie möglich echtes Feedback holen.",
         "Validiertes Lernen statt Eitelkeitsmetriken.",
         "Pivot oder Persevere: Kurswechsel ist kein Scheitern."
+      ],
+      "related": [
+        "1000-true-fans"
       ]
     },
     {
@@ -178,14 +318,24 @@
       "author": "Peter Thiel, Blake Masters",
       "year": 2014,
       "pages": 256,
-      "topics": ["business", "technologie"],
+      "topics": [
+        "business",
+        "technologie"
+      ],
       "rating": 3,
       "summary": "Echter Fortschritt entsteht nicht durch Kopieren (1 → n), sondern durch etwas grundlegend Neues (0 → 1). Thiel plädiert für Monopole durch Einzigartigkeit statt Wettbewerb.",
       "takeaways": [
         "Welche wichtige Wahrheit sehen nur wenige Menschen so wie du?",
         "Wettbewerb zerstört Gewinne – Differenzierung schafft Wert.",
         "Kleine Märkte zuerst dominieren, dann expandieren."
-      ]
+      ],
+      "related": [
+        "1000-true-fans"
+      ],
+      "coverSearch": {
+        "title": "Zero to One",
+        "author": "Peter Thiel"
+      }
     },
     {
       "id": "factfulness",
@@ -195,13 +345,20 @@
       "author": "Hans Rosling",
       "year": 2018,
       "pages": 400,
-      "topics": ["geschichte", "wissenschaft", "psychologie"],
+      "topics": [
+        "geschichte",
+        "wissenschaft",
+        "psychologie"
+      ],
       "rating": 5,
       "summary": "Die meisten Menschen schätzen den Zustand der Welt systematisch zu negativ ein. Rosling benennt zehn Instinkte, die unseren Blick verzerren, und zeigt mit Daten, wie viel besser es vielen geht.",
       "takeaways": [
         "Die Welt ist nicht in „arm“ und „reich“ geteilt – die meisten leben dazwischen.",
         "Dinge können schlecht sein und sich gleichzeitig verbessern.",
         "Vor dem Urteil: Größenordnungen und Vergleiche prüfen."
+      ],
+      "related": [
+        "kurzgesagt"
       ]
     },
     {
@@ -212,14 +369,22 @@
       "author": "Siddhartha Mukherjee",
       "year": 2016,
       "pages": 768,
-      "topics": ["wissenschaft", "gesundheit", "geschichte"],
+      "topics": [
+        "wissenschaft",
+        "gesundheit",
+        "geschichte"
+      ],
       "rating": 4,
       "summary": "Von Mendels Erbsen bis CRISPR: die Geschichte der Genetik, verwoben mit der Familiengeschichte des Autors. Ein Buch über Wissenschaft, Ethik und die Frage, was uns ausmacht.",
       "takeaways": [
         "Gene sind Wahrscheinlichkeiten, keine Schicksale.",
         "Genetisches Wissen bringt ethische Verantwortung mit sich.",
         "Die Eugenik-Geschichte mahnt zur Vorsicht."
-      ]
+      ],
+      "coverSearch": {
+        "title": "The Gene",
+        "author": "Siddhartha Mukherjee"
+      }
     },
     {
       "id": "guns-germs-steel",
@@ -229,14 +394,21 @@
       "author": "Jared Diamond",
       "year": 1997,
       "pages": 656,
-      "topics": ["geschichte", "wissenschaft"],
+      "topics": [
+        "geschichte",
+        "wissenschaft"
+      ],
       "rating": 4,
       "summary": "Warum haben Eurasier andere Kontinente erobert und nicht umgekehrt? Diamond erklärt die Ungleichheit der Welt mit Geografie, domestizierbaren Pflanzen und Tieren sowie Krankheitserregern.",
       "takeaways": [
         "Die Ost-West-Ausrichtung Eurasiens begünstigte die Verbreitung der Landwirtschaft.",
         "Krankheitserreger waren mächtigere Waffen als Gewehre.",
         "Geschichte folgt Umweltbedingungen, nicht „Überlegenheit“."
-      ]
+      ],
+      "coverSearch": {
+        "title": "Guns, Germs, and Steel",
+        "author": "Jared Diamond"
+      }
     },
     {
       "id": "pragmatic-programmer",
@@ -246,14 +418,24 @@
       "author": "David Thomas, Andrew Hunt",
       "year": 1999,
       "pages": 352,
-      "topics": ["technologie", "gewohnheiten"],
+      "topics": [
+        "technologie",
+        "gewohnheiten"
+      ],
       "rating": 5,
       "summary": "Ein Klassiker über Handwerk und Haltung in der Softwareentwicklung: Verantwortung übernehmen, Duplikation vermeiden, iterativ arbeiten und die eigenen Werkzeuge beherrschen.",
       "takeaways": [
         "DRY – Don't Repeat Yourself.",
         "Keine kaputten Fenster: kleine Mängel sofort beheben.",
         "Tracer Bullets: früh ein durchgängiges Gerüst bauen."
-      ]
+      ],
+      "related": [
+        "how-to-do-great-work"
+      ],
+      "coverSearch": {
+        "title": "The Pragmatic Programmer",
+        "author": "Andrew Hunt"
+      }
     },
     {
       "id": "range",
@@ -263,14 +445,25 @@
       "author": "David Epstein",
       "year": 2019,
       "pages": 368,
-      "topics": ["psychologie", "gewohnheiten"],
+      "topics": [
+        "psychologie",
+        "gewohnheiten"
+      ],
       "rating": 4,
       "summary": "Frühe Spezialisierung funktioniert in klar geregelten Umgebungen wie Schach oder Golf. In einer komplexen, unvorhersehbaren Welt sind jedoch oft Generalisten mit breiter Erfahrung im Vorteil.",
       "takeaways": [
         "Eine „Sampling-Phase“ ist kein Umweg, sondern eine Investition.",
         "Analogien aus fremden Feldern lösen neue Probleme.",
         "Langsames, schwieriges Lernen hält länger."
-      ]
+      ],
+      "related": [
+        "you-and-your-research",
+        "how-to-do-great-work"
+      ],
+      "coverSearch": {
+        "title": "Range",
+        "author": "David Epstein"
+      }
     },
     {
       "id": "four-thousand-weeks",
@@ -280,14 +473,25 @@
       "author": "Oliver Burkeman",
       "year": 2021,
       "pages": 272,
-      "topics": ["philosophie", "gewohnheiten"],
+      "topics": [
+        "philosophie",
+        "gewohnheiten"
+      ],
       "rating": 5,
       "summary": "Ein durchschnittliches Leben dauert etwa 4000 Wochen. Statt immer effizienter zu werden, sollten wir unsere Endlichkeit akzeptieren und bewusst entscheiden, was wir nicht tun.",
       "takeaways": [
         "Du wirst nie „alles erledigt“ haben – und das ist befreiend.",
         "Bewusst Dinge liegen lassen, um Wichtiges zu tun.",
         "Geduld und Präsenz statt ständiger Optimierung."
-      ]
+      ],
+      "related": [
+        "the-tail-end",
+        "jobs-stanford"
+      ],
+      "coverSearch": {
+        "title": "Four Thousand Weeks",
+        "author": "Oliver Burkeman"
+      }
     },
     {
       "id": "outlive",
@@ -297,13 +501,19 @@
       "author": "Peter Attia",
       "year": 2023,
       "pages": 496,
-      "topics": ["gesundheit", "wissenschaft"],
+      "topics": [
+        "gesundheit",
+        "wissenschaft"
+      ],
       "rating": 4,
       "summary": "Attia plädiert für „Medizin 3.0“: Prävention statt Reparatur. Im Fokus stehen die vier großen chronischen Krankheiten und die Frage, wie Bewegung, Schlaf, Ernährung und emotionale Gesundheit die gesunden Lebensjahre verlängern.",
       "takeaways": [
         "Healthspan ist wichtiger als Lifespan.",
         "Ausdauer (Zone 2), VO₂max und Kraft sind zentrale Hebel.",
         "Emotionale Gesundheit gehört zur Langlebigkeit dazu."
+      ],
+      "related": [
+        "huberman-lab"
       ]
     },
     {
@@ -314,13 +524,430 @@
       "author": "Eric Jorgenson",
       "year": 2020,
       "pages": 244,
-      "topics": ["business", "philosophie"],
+      "topics": [
+        "business",
+        "philosophie"
+      ],
       "rating": 4,
       "summary": "Eine Sammlung von Gedanken des Investors Naval Ravikant zu Vermögensaufbau, Hebelwirkung und Glück – kuratiert aus Tweets, Podcasts und Interviews.",
       "takeaways": [
         "Baue spezifisches Wissen auf, das sich nicht leicht lernen lässt.",
         "Hebel: Code und Medien skalieren ohne Erlaubnis.",
         "Glück ist eine Fähigkeit, die man trainieren kann."
+      ],
+      "coverSearch": {
+        "title": "The Almanack of Naval Ravikant",
+        "author": "Eric Jorgenson"
+      }
+    },
+    {
+      "id": "kunst-des-klaren-denkens",
+      "type": "audiobook",
+      "title": "Die Kunst des klaren Denkens",
+      "subtitle": "52 Denkfehler, die Sie besser anderen überlassen",
+      "author": "Rolf Dobelli",
+      "year": 2011,
+      "topics": [
+        "psychologie",
+        "business"
+      ],
+      "rating": 4,
+      "summary": "Kurze, pointierte Kapitel zu typischen Denkfehlern – vom Survivorship Bias bis zur Sunk-Cost-Falle. Ideal zum Hören in kleinen Portionen.",
+      "takeaways": [
+        "Erfolgsgeschichten verschweigen die vielen Gescheiterten (Survivorship Bias).",
+        "Versunkene Kosten sollten keine Entscheidung beeinflussen.",
+        "Denkfehler kennen heißt nicht, immun zu sein – aber es hilft."
+      ],
+      "related": [
+        "thinking-fast-and-slow"
+      ]
+    },
+    {
+      "id": "never-split-the-difference",
+      "type": "audiobook",
+      "title": "Kompromisslos verhandeln",
+      "subtitle": "Never Split the Difference",
+      "author": "Chris Voss",
+      "year": 2016,
+      "topics": [
+        "business",
+        "psychologie"
+      ],
+      "rating": 4,
+      "summary": "Ein ehemaliger FBI-Geiselunterhändler überträgt seine Techniken auf Gehaltsgespräche, Geschäftsverhandlungen und den Alltag. Im Zentrum steht taktische Empathie.",
+      "takeaways": [
+        "Aktiv zuhören und Emotionen benennen („Labeling“).",
+        "Spiegeln: die letzten Worte des Gegenübers wiederholen.",
+        "Kalibrierte Fragen („Wie soll ich das machen?“) statt Konfrontation."
+      ],
+      "coverSearch": {
+        "title": "Never Split the Difference",
+        "author": "Chris Voss"
+      }
+    },
+    {
+      "id": "stolen-focus",
+      "type": "audiobook",
+      "title": "Abgelenkt",
+      "subtitle": "Stolen Focus",
+      "author": "Johann Hari",
+      "year": 2022,
+      "topics": [
+        "technologie",
+        "gewohnheiten",
+        "psychologie"
+      ],
+      "rating": 4,
+      "summary": "Warum fällt es uns so schwer, uns zu konzentrieren? Hari argumentiert, dass es nicht nur an persönlicher Disziplin liegt, sondern an Technologie, Schlafmangel, Ernährung und Arbeitskultur.",
+      "takeaways": [
+        "Aufmerksamkeitsverlust ist auch ein gesellschaftliches Problem.",
+        "Multitasking kostet mehr, als es bringt.",
+        "Flow braucht Zeit ohne Unterbrechungen."
+      ],
+      "related": [
+        "deep-work"
+      ],
+      "coverSearch": {
+        "title": "Stolen Focus",
+        "author": "Johann Hari"
+      }
+    },
+    {
+      "id": "huberman-lab",
+      "type": "podcast",
+      "title": "Huberman Lab",
+      "author": "Andrew Huberman",
+      "year": 2021,
+      "format": "Podcast-Show",
+      "topics": [
+        "gesundheit",
+        "wissenschaft"
+      ],
+      "rating": 4,
+      "summary": "Der Stanford-Neurowissenschaftler erklärt, wie Schlaf, Licht, Bewegung und Ernährung auf Gehirn und Körper wirken – mit vielen praktischen Protokollen.",
+      "takeaways": [
+        "Morgens Tageslicht für einen stabilen Tagesrhythmus.",
+        "Viele Folgen dauern mehrere Stunden – gezielt Kapitel wählen.",
+        "Empfehlungen kritisch prüfen: nicht alles ist gleich gut belegt."
+      ],
+      "related": [
+        "why-we-sleep",
+        "outlive"
+      ]
+    },
+    {
+      "id": "hidden-brain",
+      "type": "podcast",
+      "title": "Hidden Brain",
+      "author": "Shankar Vedantam",
+      "year": 2015,
+      "format": "Podcast-Show",
+      "topics": [
+        "psychologie",
+        "wissenschaft"
+      ],
+      "rating": 5,
+      "summary": "Erzählerisch starke Folgen über die unbewussten Muster hinter unserem Verhalten – mit Forschenden aus Psychologie und Sozialwissenschaft.",
+      "takeaways": [
+        "Forschung verständlich und mit Geschichten erzählt.",
+        "Gut für alle, denen Kahneman gefallen hat.",
+        "Englischsprachig."
+      ],
+      "related": [
+        "thinking-fast-and-slow"
+      ]
+    },
+    {
+      "id": "hotel-matze",
+      "type": "podcast",
+      "title": "Hotel Matze",
+      "author": "Matze Hielscher",
+      "year": 2016,
+      "format": "Interview-Podcast",
+      "topics": [
+        "psychologie",
+        "philosophie"
+      ],
+      "rating": 4,
+      "summary": "Lange, persönliche Gespräche mit Menschen aus Kultur, Wissenschaft und Wirtschaft über Lebenswege, Krisen und das, was wirklich zählt.",
+      "takeaways": [
+        "Ruhige, tiefe Gespräche statt Schlagzeilen.",
+        "Deutschsprachig.",
+        "Gute Einstiegsfolgen nach Gast auswählen."
+      ]
+    },
+    {
+      "id": "lex-fridman",
+      "type": "podcast",
+      "title": "Lex Fridman Podcast",
+      "author": "Lex Fridman",
+      "year": 2018,
+      "format": "Interview-Podcast",
+      "topics": [
+        "technologie",
+        "wissenschaft",
+        "philosophie"
+      ],
+      "rating": 3,
+      "summary": "Mehrstündige Gespräche über KI, Wissenschaft, Geschichte und Philosophie mit Forschenden, Gründer:innen und Denker:innen.",
+      "takeaways": [
+        "Sehr lange Folgen – eher selektiv hören.",
+        "Stark bei Technik- und Wissenschaftsgästen.",
+        "Englischsprachig."
+      ]
+    },
+    {
+      "id": "geschichten-aus-der-geschichte",
+      "type": "podcast",
+      "title": "Geschichten aus der Geschichte",
+      "author": "Richard Hemmer, Daniel Meßner",
+      "year": 2016,
+      "format": "Podcast-Show",
+      "topics": [
+        "geschichte"
+      ],
+      "rating": 5,
+      "summary": "Zwei Historiker erzählen sich gegenseitig abwechselnd eine Geschichte aus der Geschichte – kurzweilig, gut recherchiert und oft überraschend.",
+      "takeaways": [
+        "Kurze, abgeschlossene Folgen.",
+        "Perfekt für Spaziergänge und Pendeln.",
+        "Deutschsprachig."
+      ],
+      "related": [
+        "sapiens"
+      ]
+    },
+    {
+      "id": "kurzgesagt",
+      "type": "video",
+      "title": "Kurzgesagt – In a Nutshell",
+      "author": "Kurzgesagt",
+      "year": 2013,
+      "format": "YouTube-Kanal",
+      "topics": [
+        "wissenschaft",
+        "geschichte"
+      ],
+      "rating": 5,
+      "summary": "Aufwendig animierte Erklärvideos zu Weltraum, Biologie, Klima und großen Fragen der Menschheit. Aus München, auch mit deutschem Kanal.",
+      "takeaways": [
+        "Komplexe Themen in 10–15 Minuten.",
+        "Quellen werden zu jedem Video veröffentlicht.",
+        "Toll auch für Jugendliche."
+      ],
+      "link": "https://www.youtube.com/@kurzgesagt",
+      "related": [
+        "factfulness"
+      ]
+    },
+    {
+      "id": "3blue1brown",
+      "type": "video",
+      "title": "3Blue1Brown",
+      "author": "Grant Sanderson",
+      "year": 2015,
+      "format": "YouTube-Kanal",
+      "topics": [
+        "wissenschaft",
+        "technologie"
+      ],
+      "rating": 5,
+      "summary": "Mathematik visuell erklärt – von linearer Algebra bis zu neuronalen Netzen. Die Animationen machen abstrakte Ideen intuitiv verständlich.",
+      "takeaways": [
+        "Serie „Neural Networks“ als Einstieg in KI.",
+        "Intuition vor Formeln.",
+        "Englischsprachig."
+      ],
+      "link": "https://www.youtube.com/@3blue1brown"
+    },
+    {
+      "id": "veritasium",
+      "type": "video",
+      "title": "Veritasium",
+      "author": "Derek Muller",
+      "year": 2010,
+      "format": "YouTube-Kanal",
+      "topics": [
+        "wissenschaft"
+      ],
+      "rating": 4,
+      "summary": "Wissenschaftsvideos mit Experimenten und überraschenden Fragen – oft mit dem Ziel, verbreitete Fehlvorstellungen auszuräumen.",
+      "takeaways": [
+        "Lernen beginnt beim Irrtum.",
+        "Viele Experimente vor Ort.",
+        "Englischsprachig."
+      ],
+      "link": "https://www.youtube.com/@veritasium"
+    },
+    {
+      "id": "jobs-stanford",
+      "type": "video",
+      "title": "Stay Hungry, Stay Foolish",
+      "subtitle": "Stanford Commencement Speech",
+      "author": "Steve Jobs",
+      "year": 2005,
+      "duration": 15,
+      "format": "Rede",
+      "topics": [
+        "philosophie"
+      ],
+      "rating": 5,
+      "summary": "Drei Geschichten aus Jobs' Leben: über das Verbinden der Punkte, über Liebe und Verlust und über den Tod. Eine der meistgesehenen Abschlussreden.",
+      "takeaways": [
+        "Die Punkte lassen sich nur rückblickend verbinden.",
+        "Tu, was du liebst – und gib dich nicht mit weniger zufrieden.",
+        "Die Endlichkeit hilft, Wichtiges von Unwichtigem zu trennen."
+      ],
+      "related": [
+        "four-thousand-weeks",
+        "the-tail-end"
+      ]
+    },
+    {
+      "id": "tim-urban-procrastinator",
+      "type": "video",
+      "title": "Inside the Mind of a Master Procrastinator",
+      "subtitle": "TED Talk",
+      "author": "Tim Urban",
+      "year": 2016,
+      "duration": 14,
+      "format": "TED Talk",
+      "topics": [
+        "gewohnheiten",
+        "psychologie"
+      ],
+      "rating": 4,
+      "summary": "Humorvoller Vortrag über den „Instant Gratification Monkey“ und das „Panic Monster“ – und warum Aufschieben ohne Deadline am gefährlichsten ist.",
+      "takeaways": [
+        "Ohne Deadline greift das Panikmonster nicht ein.",
+        "Aufschieben betrifft alle, nicht nur Studierende.",
+        "Blick auf das „Leben in Wochen“ schärft Prioritäten."
+      ],
+      "related": [
+        "atomic-habits",
+        "the-tail-end"
+      ]
+    },
+    {
+      "id": "how-to-do-great-work",
+      "type": "article",
+      "title": "How to Do Great Work",
+      "author": "Paul Graham",
+      "year": 2023,
+      "duration": 45,
+      "source": "paulgraham.com",
+      "topics": [
+        "gewohnheiten",
+        "philosophie"
+      ],
+      "rating": 5,
+      "summary": "Ein ausführlicher Essay darüber, wie außergewöhnliche Arbeit entsteht: Neugier, ein passendes Feld, Mut zu ungewöhnlichen Fragen und beständige Arbeit an etwas, das einen fasziniert.",
+      "takeaways": [
+        "Folge deiner Neugier bis an die Grenze des Wissens.",
+        "Kleine, konsequente Schritte summieren sich.",
+        "Offene Fragen sind oft wertvoller als Antworten."
+      ],
+      "link": "https://paulgraham.com/greatwork.html",
+      "related": [
+        "range",
+        "you-and-your-research"
+      ]
+    },
+    {
+      "id": "makers-schedule",
+      "type": "article",
+      "title": "Maker's Schedule, Manager's Schedule",
+      "author": "Paul Graham",
+      "year": 2009,
+      "duration": 6,
+      "source": "paulgraham.com",
+      "topics": [
+        "gewohnheiten",
+        "technologie"
+      ],
+      "rating": 5,
+      "summary": "Manager denken in Stundenblöcken, Maker in halben Tagen. Ein einzelnes Meeting kann einen ganzen kreativen Nachmittag zerstören.",
+      "takeaways": [
+        "Meetings bündeln statt verstreuen.",
+        "Kreative Arbeit braucht lange, ungestörte Blöcke.",
+        "Kurz, klar – in fünf Minuten gelesen."
+      ],
+      "link": "https://paulgraham.com/makersschedule.html",
+      "related": [
+        "deep-work"
+      ]
+    },
+    {
+      "id": "the-tail-end",
+      "type": "article",
+      "title": "The Tail End",
+      "author": "Tim Urban",
+      "year": 2015,
+      "duration": 8,
+      "source": "Wait But Why",
+      "topics": [
+        "philosophie"
+      ],
+      "rating": 5,
+      "summary": "Tim Urban rechnet das Leben in Wochen, Wintern und Pizzen aus – und zeigt, dass wir einen großen Teil der gemeinsamen Zeit mit unseren Eltern oft schon hinter uns haben.",
+      "takeaways": [
+        "Zeit mit geliebten Menschen ist begrenzter als gedacht.",
+        "Prioritäten und Wohnort bestimmen, wie viel davon bleibt.",
+        "Ein kurzer Text, der lange nachwirkt."
+      ],
+      "link": "https://waitbutwhy.com/2015/12/the-tail-end.html",
+      "related": [
+        "four-thousand-weeks",
+        "jobs-stanford"
+      ]
+    },
+    {
+      "id": "1000-true-fans",
+      "type": "article",
+      "title": "1,000 True Fans",
+      "author": "Kevin Kelly",
+      "year": 2008,
+      "duration": 12,
+      "source": "The Technium",
+      "topics": [
+        "business",
+        "technologie"
+      ],
+      "rating": 4,
+      "summary": "Kreative brauchen kein Millionenpublikum: Etwa tausend echte Fans, die alles kaufen, was man macht, können ein Einkommen sichern – das Internet macht sie erreichbar.",
+      "takeaways": [
+        "Tiefe Beziehung zu wenigen schlägt Reichweite.",
+        "Direkter Kontakt zu Unterstützer:innen ist entscheidend.",
+        "Grundlage vieler Creator-Geschäftsmodelle."
+      ],
+      "link": "https://kk.org/thetechnium/1000-true-fans/",
+      "related": [
+        "lean-startup",
+        "zero-to-one"
+      ]
+    },
+    {
+      "id": "you-and-your-research",
+      "type": "article",
+      "title": "You and Your Research",
+      "author": "Richard Hamming",
+      "year": 1986,
+      "duration": 40,
+      "source": "Vortrag (Transkript)",
+      "topics": [
+        "wissenschaft",
+        "gewohnheiten"
+      ],
+      "rating": 5,
+      "summary": "Der berühmte Vortrag des Mathematikers bei Bell Labs: Warum machen manche Forschende bedeutende Arbeit und andere nicht? Hamming spricht über Mut, offene Türen und die wichtigen Probleme.",
+      "takeaways": [
+        "Was sind die wichtigsten Probleme deines Feldes – und warum arbeitest du nicht daran?",
+        "Offene Türen: Austausch schlägt Abschottung.",
+        "Wissen verzinst sich wie Kapital."
+      ],
+      "related": [
+        "range",
+        "how-to-do-great-work"
       ]
     }
   ]

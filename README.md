@@ -1,11 +1,13 @@
 # 📚 Leseliste
 
-Kuratierte Buchempfehlungen mit Kurzzusammenfassung, Kernaussagen und Gliederung nach Themen – als statische Seite auf GitHub Pages.
+Kuratierte Empfehlungen – Bücher, Hörbücher, Podcasts, YouTube und Artikel – mit Kurzzusammenfassung, Kernaussagen und Gliederung nach Themen. Statische Seite auf GitHub Pages.
 
 ## Features (Prototyp)
 
-- Buchkarten mit generiertem Cover, Bewertung, Kurzzusammenfassung
-- Detailansicht mit Kernaussagen und Link zum Buch
+- Tabs für alle Medientypen (Alle · Bücher · Hörbücher · Podcasts · YouTube · Artikel)
+- Karten mit Cover, Bewertung, Kurzzusammenfassung
+- **Detailseite** (`#/<id>`) mit großem Cover, Eckdaten, Kernaussagen, „Passt dazu“ und „Mehr zum Thema“
+- Echte Buchcover über die [Open Library](https://openlibrary.org) (im Browser geladen und gecacht); ohne Treffer ein generiertes Cover
 - Filter nach Themen (Mehrfachauswahl), Volltextsuche (`/` fokussiert die Suche), Sortierung
 - Ansicht „Nach Themen“ (gegliedert) oder „Raster“
 - Filterzustand steckt in der URL → teilbare Links
@@ -29,9 +31,17 @@ Alles steht in [`data/items.json`](data/items.json). Neues Buch = neuer Eintrag 
   "rating": 4,
   "summary": "2–3 Sätze Zusammenfassung.",
   "takeaways": ["Kernaussage 1", "Kernaussage 2"],
-  "link": "https://… (optional, sonst Open-Library-Suche)"
+  "link": "https://… (optional, sonst Suchlink)",
+  "related": ["andere-id"],
+  "coverSearch": { "title": "Originaltitel", "author": "Autor" },
+  "cover": "https://… (optional, feste Cover-URL)"
 }
 ```
+
+Für Nicht-Bücher gibt es zusätzlich `duration` (Minuten), `format` (z. B. „TED Talk“, „YouTube-Kanal“) und `source` (z. B. „Wait But Why“). `type` ist einer von `book`, `audiobook`, `podcast`, `video`, `article`.
+
+- `related` verknüpft Einträge – die Verknüpfung wirkt in beide Richtungen.
+- `coverSearch` hilft bei deutschen Titeln: gesucht wird nach dem Originaltitel.
 
 Themen und Medientypen sind ebenfalls in der Datei definiert (`topics`, `types`).
 
@@ -51,13 +61,12 @@ python3 -m http.server 8000
 ## Roadmap
 
 - [x] Bücher mit Zusammenfassung, Themen, Filter, Suche
-- [ ] 🎧 Hörbücher (Sprecher:in, Laufzeit, Plattform-Links)
-- [ ] 🎙️ Podcasts (einzelne Folgen oder ganze Shows)
-- [ ] ▶️ YouTube-Videos (mit Vorschaubild, Dauer)
-- [ ] 📰 Artikel im Netz (Quelle, Lesezeit)
-- [ ] Verknüpfungen: „Passt dazu“ – z. B. Buch ↔ Podcast-Folge mit dem Autor
+- [x] 🎧 Hörbücher · 🎙️ Podcasts · ▶️ YouTube · 📰 Artikel
+- [x] Detailseite mit Cover
+- [x] Verknüpfungen „Passt dazu“ (z. B. Buch ↔ Artikel ↔ Video)
+- [x] Echte Buchcover via Open Library
+- [ ] Vorschaubilder für YouTube (braucht feste Video-/Kanal-IDs)
+- [ ] Hörbücher: Sprecher:in, Laufzeit, Plattform-Links
+- [ ] Einzelne Podcast-Folgen statt nur ganzer Shows
 - [ ] Status-Tags („Gelesen“, „Will ich lesen“) und Merkliste
-- [ ] Echte Cover (z. B. via Open Library Covers API)
 - [ ] Englisch/Deutsch-Umschalter
-
-Die Medientypen sind im Datenmodell bereits angelegt (`type`-Feld). Für einen neuen Typ reicht es, in `types` den `status` auf `"live"` zu setzen und Einträge mit dem passenden `type` hinzuzufügen.
