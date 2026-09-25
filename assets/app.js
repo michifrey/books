@@ -151,8 +151,12 @@ function hydrateCovers(root) {
 /* ---------- URL state ---------- */
 // "#/<id>" is a detail page; anything else is the list with its filters.
 
+// Short, shareable aliases for lists, e.g. "#haerry".
+const HASH_ALIASES = { haerry: "l=thomas" };
+
 function readHash() {
-  const p = new URLSearchParams(location.hash.slice(1));
+  const raw = location.hash.slice(1);
+  const p = new URLSearchParams(HASH_ALIASES[raw] ?? raw);
   state.type = typeById.has(p.get("type")) ? p.get("type") : "all";
   state.list = listById.has(p.get("l")) ? p.get("l") : "all";
   state.topics = new Set((p.get("t") || "").split(",").filter((t) => topicById.has(t)));
@@ -266,6 +270,7 @@ function renderLists() {
   const btn = (id, label, n) => `<button type="button" class="topic" data-list="${id}" aria-pressed="${state.list === id}">
       <span class="dot" style="--h:${LIST_HUES[id] ?? 240}"></span>${esc(label)}<span class="n">${n}</span>
     </button>`;
+  $("#feature").setAttribute("aria-current", state.list === "thomas" ? "true" : "false");
   $("#lists").innerHTML = btn("all", "Alle Listen", pool.length) +
     data.lists.map((l) => btn(l.id, l.label, pool.filter((i) => i.lists?.includes(l.id)).length)).join("");
 }
@@ -283,8 +288,29 @@ function renderTopics() {
     .join("");
 }
 
+function renderListBanner(hero, list) {
+  const pool = data.items.filter(ofType);
+  const pick = pool.find((i) => i.rating === 5 && COVER_TYPES.has(i.type)) ?? pool[0];
+  hero.hidden = false;
+  hero.className = "hero hero--list";
+  hero.innerHTML = `
+    <div>
+      <span class="eyebrow">${icon("star")} Kuratierte Liste</span>
+      <h2>${esc(list.label)}</h2>
+      <p class="hero__summary">${esc(list.intro ?? "")}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="${esc(list.url)}" target="_blank" rel="noopener">${esc(list.urlLabel ?? "Mehr erfahren")} ${icon("arrow")}</a>
+        <span class="hero__count">${pool.length} Empfehlungen</span>
+      </div>
+    </div>
+    ${pick ? `<a class="hero__cover" href="#/${pick.id}" tabindex="-1" aria-hidden="true">${cover(pick)}</a>` : ""}`;
+  hydrateCovers(hero);
+}
+
 function renderHero() {
   const hero = $("#hero");
+  const list = listById.get(state.list);
+  if (list?.url && !state.query && !state.topics.size) return renderListBanner(hero, list);
   const pool = data.items.filter(ofType).filter((i) => i.rating === 5);
   if (state.query || state.topics.size || !pool.length) {
     hero.hidden = true;
@@ -410,7 +436,7 @@ function renderDetail(item) {
     : [];
   const more = sameTopicItems(item, new Set([...related, ...inSeries].map((r) => r.id)));
   const listPills = (item.lists ?? []).map((id) =>
-    `<span class="list-pill"><span class="dot" style="--h:${LIST_HUES[id] ?? 240}"></span>${esc(listById.get(id)?.short ?? id)}</span>`).join("");
+    `<a class="list-pill" href="#l=${id}"><span class="dot" style="--h:${LIST_HUES[id] ?? 240}"></span>${esc(listById.get(id)?.short ?? id)}</a>`).join("");
   const starsHtml = Array.from({ length: 5 }, (_, i) => icon("star", i < item.rating ? "" : "off")).join("");
 
   $("#page").innerHTML = `

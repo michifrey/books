@@ -99,6 +99,24 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 }
 .brand__mark svg { fill: #fff; stroke: none; width: 20px; height: 20px; }
 
+.feature {
+  display: flex; align-items: center; gap: 12px; padding: 14px;
+  border-radius: 16px; text-decoration: none; color: var(--text);
+  background: linear-gradient(120deg, var(--hero), var(--hero-2));
+  border: 1px solid transparent; transition: border-color .15s, transform .15s;
+}
+.feature:hover { transform: translateY(-1px); }
+.feature[aria-current="true"] { border-color: var(--accent); }
+.feature__icon {
+  width: 38px; height: 38px; border-radius: 12px; flex: none;
+  display: grid; place-items: center; background: var(--accent); color: var(--accent-ink);
+}
+.feature__icon svg { fill: currentColor; stroke: none; }
+.feature strong { display: block; font-size: .95rem; font-weight: 800; letter-spacing: -.01em; }
+.feature small { display: block; font-size: .78rem; color: var(--muted); font-weight: 600; }
+.hero__count { font-weight: 700; color: var(--muted); font-size: .9rem; }
+.list-pill { text-decoration: none; color: inherit; }
+.list-pill:hover { border-color: var(--muted); }
 .nav { display: flex; flex-direction: column; gap: 2px; }
 .nav button {
   display: flex; align-items: center; gap: 12px; width: 100%;
@@ -361,6 +379,7 @@ select {
   .nav button { padding: 8px 14px; }
   .topic { border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; }
   .side-label { display: none; }
+  .feature { padding: 10px 12px; }
   .main { padding: 16px 16px 0; }
   .hero { grid-template-columns: 1fr; padding: 26px 22px; gap: 20px; }
   .hero__cover { display: none; }
