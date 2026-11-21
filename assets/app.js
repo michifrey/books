@@ -49,7 +49,7 @@ const icon = (name, cls = "") => `<svg width="20" height="20" viewBox="0 0 24 24
 
 // Evenly spread hues so every topic gets its own recognisable dot colour.
 const TOPIC_HUES = [16, 262, 145, 38, 200, 330, 225, 95, 280, 185, 120, 0, 50, 305];
-const LIST_HUES = { thomas: 16, michi: 200 };
+const LIST_HUES = { thomas: 16, michi: 200, favoriten: 330 };
 const topicHue = (id) => TOPIC_HUES[data.topics.findIndex((t) => t.id === id) % TOPIC_HUES.length] ?? 0;
 
 const TYPE_TEXT = {
@@ -154,7 +154,7 @@ function hydrateCovers(root) {
 // "#/<id>" is a detail page; anything else is the list with its filters.
 
 // Short, shareable aliases for lists, e.g. "#haerry".
-const HASH_ALIASES = { haerry: "l=thomas" };
+const HASH_ALIASES = { haerry: "l=thomas", favoriten: "l=favoriten" };
 
 function readHash() {
   const raw = location.hash.slice(1);

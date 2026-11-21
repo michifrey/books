@@ -40,7 +40,7 @@ Alles steht in [`data/items.json`](data/items.json). Neues Buch = neuer Eintrag 
 
 Weitere optionale Felder:
 
-- `lists` – in welcher Liste der Eintrag steht: `thomas` (Empfohlen von Thomas Härry) und/oder `michi` (Von Michi gehört). Die Listen sind unter `lists` oben in der Datei definiert.
+- `lists` – in welcher Liste der Eintrag steht: `thomas` (Empfohlen von Thomas Härry), `michi` (Von Michi gehört) und/oder `favoriten` (Michis Favoriten, Kurzlink `#favoriten`). Die Listen sind unter `lists` oben in der Datei definiert.
 - `series` und `seriesNo` – Reihe und Band, z. B. `"Ulldart"` / `4`. Bände werden in Reihenfolge sortiert, auf der Detailseite erscheint „Mehr aus der Reihe“.
 - `platform` – z. B. `"Google Play Books"` (der Button verlinkt dann auf die Google-Play-Suche) oder `"Pocket Casts"`.
 - `rating` ist optional. Einträge ohne Bewertung zeigen keine Sterne.
