@@ -1341,7 +1341,8 @@
         "glaube"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Google Play Books",
       "summary": "John Mark Comer über Jüngerschaft: wie man im Alltag Jesus nachfolgt und von ihm lernt."
@@ -1356,7 +1357,8 @@
         "gewohnheiten"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Google Play Books",
       "summary": "Wie man Jesus als Lehrer folgt: bei ihm sein, wie er werden und tun, was er tat – gestützt durch eine gemeinsame Lebensregel und geistliche Praktiken."
@@ -1371,7 +1373,8 @@
         "gewohnheiten"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Google Play Books",
       "summary": "Hektik ist der Feind des geistlichen Lebens. Comer schlägt Stille, Sabbat, Einfachheit und Langsamkeit als Gegenmittel vor."
@@ -1385,7 +1388,8 @@
         "glaube"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Google Play Books",
       "summary": "Über die Welt, das Fleisch und den Teufel: wie Lügen unser Denken prägen und wie man ihnen im Alltag widersteht."
@@ -1399,7 +1403,8 @@
         "glaube"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Google Play Books",
       "summary": "Ausgehend von der Selbstbeschreibung Gottes in 2. Mose 34 fragt Comer, wer Gott ist und wie er wirklich ist."
@@ -4048,6 +4053,11 @@
       "id": "michi",
       "label": "Von Michi gehört",
       "short": "Von Michi gehört"
+    },
+    {
+      "id": "favoriten",
+      "label": "Michis Favoriten",
+      "short": "Michis Favorit"
     }
   ]
 }
