@@ -4038,6 +4038,127 @@
       ],
       "link": "https://www.biblemap.ch/",
       "summary": "Lernplattform, um die Bibel besser kennenzulernen."
+    },
+    {
+      "id": "into-the-quiet",
+      "type": "audiobook",
+      "title": "Into the Quiet",
+      "author": "John Mark Comer",
+      "topics": [
+        "glaube"
+      ],
+      "lists": [
+        "michi",
+        "favoriten"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Ein kurzes Buch von John Mark Comer über Stille und Ruhe: wie man im lauten Alltag still wird und Zeit allein mit Gott verbringt.",
+      "related": [
+        "the-ruthless-elimination-of-hurry"
+      ]
+    },
+    {
+      "id": "reisen-in-die-welt-des-wahns",
+      "type": "book",
+      "title": "Reisen in die Welt des Wahns",
+      "author": "Achim Haug",
+      "topics": [
+        "psychologie",
+        "gesundheit"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Ein Psychiater erzählt von inneren Stimmen, bizarren Botschaften und gefährlichen Doppelgängern – Fallgeschichten aus der Welt des Wahns."
+    },
+    {
+      "id": "frankenstein",
+      "type": "book",
+      "title": "Frankenstein, or, The Modern Prometheus",
+      "author": "Mary Wollstonecraft Shelley",
+      "topics": [
+        "roman"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Der Klassiker der Schauerliteratur: Victor Frankenstein erschafft ein künstliches Wesen und muss mit den Folgen leben."
+    },
+    {
+      "id": "nikola-tesla",
+      "type": "book",
+      "title": "Nikola Tesla",
+      "subtitle": "Imagination and the Man That Invented the 20th Century",
+      "author": "Sean Patrick",
+      "topics": [
+        "wissenschaft",
+        "technologie",
+        "geschichte"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Kurze Biografie des Erfinders Nikola Tesla, dessen Ideen zu Wechselstrom und Funk das 20. Jahrhundert geprägt haben."
+    },
+    {
+      "id": "pride-and-prejudice",
+      "type": "book",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "topics": [
+        "roman"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Jane Austens Klassiker über Elizabeth Bennet und Mr. Darcy – Liebe, Stolz und Vorurteile in der englischen Gesellschaft um 1800."
+    },
+    {
+      "id": "what-is-html5",
+      "type": "book",
+      "title": "What Is HTML5?",
+      "author": "Brett McLaughlin",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Kurzer Überblick von O'Reilly: was HTML5 ist und was es für die Webentwicklung bedeutet."
+    },
+    {
+      "id": "what-is-node",
+      "type": "book",
+      "title": "What Is Node?",
+      "author": "Brett McLaughlin",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Kurzer Überblick von O'Reilly: was Node.js ist und wofür sich JavaScript auf dem Server eignet."
+    },
+    {
+      "id": "javascript-and-html5-now",
+      "type": "book",
+      "title": "JavaScript and HTML5 Now",
+      "subtitle": "A New Paradigm for the Open Web",
+      "author": "Kyle Simpson",
+      "topics": [
+        "software"
+      ],
+      "lists": [
+        "michi"
+      ],
+      "platform": "Google Play Books",
+      "summary": "Kurzer Essay über JavaScript und HTML5 als Grundlage des offenen Webs."
     }
   ],
   "lists": [
