@@ -1549,7 +1549,8 @@
         "glaube"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Google Play Books",
       "summary": "Über radikale, alltägliche Gastfreundschaft als gelebten Glauben."
@@ -3125,7 +3126,8 @@
         "glaube"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Pocket Casts",
       "summary": "Podcast rund um die Practicing-the-Way-Bewegung: Jüngerschaft, geistliche Praktiken und ein Leben in der Nachfolge Jesu.",
@@ -3180,7 +3182,8 @@
         "glaube"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Pocket Casts",
       "summary": "Der Podcast zum Buch „Live No Lies“ über die Lügen von Welt, Fleisch und Teufel.",
@@ -3199,7 +3202,8 @@
         "gewohnheiten"
       ],
       "lists": [
-        "michi"
+        "michi",
+        "favoriten"
       ],
       "platform": "Pocket Casts",
       "summary": "Podcast gegen Hektik und Dauerstress: warum Eile dem geistlichen Leben schadet und wie ein langsameres Leben aussehen kann.",
@@ -4178,7 +4182,8 @@
     {
       "id": "favoriten",
       "label": "Michis Favoriten",
-      "short": "Michis Favorit"
+      "short": "Michis Favorit",
+      "intro": "Michis Lieblingsbücher und -podcasts – die Empfehlungen, die Michi am meisten am Herzen liegen."
     }
   ]
 }
