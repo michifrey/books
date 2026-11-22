@@ -99,6 +99,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 }
 .brand__mark svg { fill: #fff; stroke: none; width: 20px; height: 20px; }
 
+.features { display: flex; flex-direction: column; gap: 10px; }
 .feature {
   display: flex; align-items: center; gap: 12px; padding: 14px;
   border-radius: 16px; text-decoration: none; color: var(--text);
@@ -111,6 +112,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
   width: 38px; height: 38px; border-radius: 12px; flex: none;
   display: grid; place-items: center; background: var(--accent); color: var(--accent-ink);
 }
+.feature--fav .feature__icon { background: hsl(330 65% 55%); color: #fff; }
 .feature__icon svg { fill: currentColor; stroke: none; }
 .feature strong { display: block; font-size: .95rem; font-weight: 800; letter-spacing: -.01em; }
 .feature small { display: block; font-size: .78rem; color: var(--muted); font-weight: 600; }
